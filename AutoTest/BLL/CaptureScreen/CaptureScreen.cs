@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace FTBAutoTestTool.BLL
+namespace AutoTestTool.BLL
 {
     class CaptureWord
     {
