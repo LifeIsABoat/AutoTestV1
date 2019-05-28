@@ -1,20 +1,33 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Tool.BLL;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    class MoveToHomeScreenExecutorBC4 : AbstractMoveToHomeScreenExecutorMFCTP
     {
-        public Form1()
+        public MoveToHomeScreenExecutorBC4(ScreenIdentify homeScreenIdentify)
+            :base(homeScreenIdentify)
         {
-            InitializeComponent();
+
+        }
+
+        protected override void waitForBackHome()
+        {
+            //wait for 600 s 
+            for (int cnt = 0; cnt < 120; cnt++)
+            {
+                //Check Screen Change for 5s
+                LogScreenChangeChecker.check(5000);
+
+                //check home
+                if (true == checkHome())
+                    break;
+            }
         }
     }
 }
