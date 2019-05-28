@@ -1,20 +1,42 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Tool.BLL;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    abstract class AbstractListFixedScreenExecutorMFCTP : AbstractCommandExecutor
     {
-        public Form1()
+        protected AbstractCommandExecutor rawScreenLoader;
+
+        public override void execute(object param)
         {
-            InitializeComponent();
+            Screen screen = param as Screen;
+            if (null == screen)
+                throw new FTBAutoTestException("Load screen error by invalid param.");
+
+            StaticLog4NetLogger.commandExecutorLogger.Info("list-f start.");
+            try
+            {
+                rawScreenLoader.execute(screen);
+                fixScreen(screen);
+                StaticCurrentScreen.set(screen);
+                StaticLog4NetLogger.commandExecutorLogger.Info("list-f succeed.");
+                StaticLog4NetLogger.commandExecutorLogger.Debug("list-f succeed.\r\n" + screen.listControl() + "\r\n");
+            }//todo
+            catch (FTBAutoTestException excp)
+            {
+                StaticLog4NetLogger.commandExecutorLogger.Warn("list-f failed.\r\nReason:" + excp.Message);
+                throw excp;
+            }
         }
+
+        protected AbstractListFixedScreenExecutorMFCTP()
+        {
+            rawScreenLoader = StaticCommandExecutorList.get(CommandList.list_r);
+        }
+        protected abstract void fixScreen(Screen screen);
     }
 }
