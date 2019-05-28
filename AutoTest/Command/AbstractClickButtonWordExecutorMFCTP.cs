@@ -1,20 +1,38 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    abstract class AbstractClickButtonWordExecutorMFCTP : AbstractCommandExecutor
     {
-        public Form1()
+        protected AbstractCommandExecutor tpClicker;
+
+        protected AbstractClickButtonWordExecutorMFCTP()
         {
-            InitializeComponent();
+            this.tpClicker = StaticCommandExecutorList.get(CommandList.click_p);
         }
+
+        public override void execute(object param = null)
+        {
+            string targetButtonWords = param as string;
+            if (null == targetButtonWords)
+                throw new FTBAutoTestException("Move to target screen error by invalid param.");
+            StaticLog4NetLogger.commandExecutorLogger.Info("click-w \"" + targetButtonWords + "\" start.");
+            try
+            {
+                click(targetButtonWords);
+                StaticLog4NetLogger.commandExecutorLogger.Info("click-w \"" + targetButtonWords + "\" succeed.");
+            }
+            catch (FTBAutoTestException excp)
+            {
+                StaticLog4NetLogger.commandExecutorLogger.Warn("click-w \"" + targetButtonWords + "\" failed.\nReason:"+ excp.Message);
+                throw excp;
+            }
+        }
+
+        protected abstract void click(string targetButtonWords);
     }
 }
