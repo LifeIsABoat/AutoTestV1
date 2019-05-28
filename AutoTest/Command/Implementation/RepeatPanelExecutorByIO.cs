@@ -1,20 +1,54 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Tool.Machine;
+using Tool.BLL;
+using System.Threading;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    class RepeatPanelExecutorByIO : AbstractRepeatPanelExecutorMFCTP
     {
-        public Form1()
+        private AbstractComponentMachineIO io;
+        private AbstractComponentTouchPanelMFCTP touchPanel;
+        public RepeatPanelExecutorByIO(AbstractMachineMFCTP machine)
         {
-            InitializeComponent();
+            this.io = machine.io;
+            touchPanel = machine.touchPanel;
+        }
+
+        public override void longClick(Position pos)
+        {
+            if (StaticEnvironInfo.isTPBvboardTested() == true)
+            {
+                //push and repeat
+                touchPanel.LongTPPush(pos);
+                Thread.Sleep(100);
+                touchPanel.TPRelease(pos);
+            }
+            else
+            {
+                //Open Log
+                if (io.isReadOFF())
+                    io.readON();
+
+                //Load Standard Screen
+                LogScreenChangeChecker.load();
+
+                //push and repeat
+                touchPanel.LongTPPush(pos);
+
+                Thread.Sleep(100);
+
+                touchPanel.TPRelease(pos);
+
+                //Close Log Reader
+                if (io.isReadON())
+                    io.readOFF();
+            }
         }
     }
 }
