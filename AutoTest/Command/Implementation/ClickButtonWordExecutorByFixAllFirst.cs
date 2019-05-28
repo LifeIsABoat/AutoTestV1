@@ -1,20 +1,18 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Tool.BLL;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    class ClickButtonWordExecutorByFixAllFirst : AbstractClickButtonWordExecutorMFCTP
     {
-        public Form1()
+        protected override void click(string targetButtonWords)
         {
-            InitializeComponent();
+            ControlButtonIdentify targetButtonIdentify = new ControlButtonIdentify(targetButtonWords);
+            StaticCommandExecutorList.get(CommandList.click_b).execute(targetButtonIdentify);
         }
     }
 }
