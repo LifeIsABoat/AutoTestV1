@@ -1,20 +1,60 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Tool.Machine;
+using Tool.BLL;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    class ClickMachineKeyExecutorMFCTPByIO : AbstractClickMachineKeyExecutorMFCTP
     {
-        public Form1()
+        private AbstractComponentMachineIO io;
+        private AbstractComponentKeyBoardMFCTP keyBoard;
+        
+        public ClickMachineKeyExecutorMFCTPByIO(AbstractMachineMFCTP machine)
         {
-            InitializeComponent();
+            this.io = machine.io;
+            keyBoard = machine.keyBoard;
+        }
+
+        /*
+         *  Description: Keyboard Click
+         *  Param: string -keyboard command
+         *  Return: 
+         *  Exception: 
+         *  Example: click(mKeyBoardIO.TEN5_KEY)
+         */
+        protected override void click(string keyCode) 
+        {
+            if (StaticEnvironInfo.isTPBvboardTested() == true)
+            {
+                keyBoard.sendKey(keyCode);
+                System.Threading.Thread.Sleep(750);
+            }
+            else
+            {
+                //Open Log Reader
+                if (io.isReadOFF())
+                    io.readON();
+
+                //Load Standard Screen
+                LogScreenChangeChecker.load();
+
+                //Click Key
+                keyBoard.sendKey(keyCode);
+
+                //Check Screen Change
+                LogScreenChangeChecker.check(600);
+
+                //Close Log Reader
+                if (io.isReadON())
+                    io.readOFF();
+            }
         }
     }
+
 }
