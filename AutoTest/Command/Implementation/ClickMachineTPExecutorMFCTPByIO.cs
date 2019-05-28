@@ -1,20 +1,56 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Tool.Machine;
+using Tool.BLL;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    class ClickMachineTPExecutorMFCTPByIO : AbstractClickMachineTPExecutorMFCTP
     {
-        public Form1()
+        private AbstractComponentMachineIO io;
+        private AbstractComponentTouchPanelMFCTP touchPanel;
+        public ClickMachineTPExecutorMFCTPByIO(AbstractMachineMFCTP machine)
         {
-            InitializeComponent();
+            this.io = machine.io;
+            touchPanel = machine.touchPanel;
+        }
+        /*
+         *  Description: touchpanel click
+         *  Param: Position-coordinate 
+         *  Return: 
+         *  Exception: 
+         *  Example: click(new Position(135, 107))
+         */
+        protected override void click(Position pos)
+        {
+            if (StaticEnvironInfo.isTPBvboardTested() == true)
+            {
+                touchPanel.TPClick(pos);
+                System.Threading.Thread.Sleep(1600);
+            }
+            else
+            {
+                //Open Log Reader
+                if (io.isReadOFF())
+                    io.readON();
+
+                //Load Standard Screen
+                LogScreenChangeChecker.load();
+
+                //Click Key
+                touchPanel.TPClick(pos);
+
+                //Check Screen Change
+                LogScreenChangeChecker.check(600);
+
+                //Close Log Reader
+                if (io.isReadON())
+                    io.readOFF();
+            }
         }
     }
 }
