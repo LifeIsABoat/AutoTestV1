@@ -1,20 +1,38 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Threading;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    abstract class AbstractClickMachineTPExecutorMFCTP : AbstractCommandExecutor
     {
-        public Form1()
+        public override void execute(object param)
         {
-            InitializeComponent();
+            
+            Position pos = param as Position;
+            if (null == pos)
+                throw new FTBAutoTestException("Click TP error by invalid param.");
+
+            try
+            {
+                cmdMutex.WaitOne();
+                StaticLog4NetLogger.commandExecutorLogger.Info("click-p \"" + pos.x + "," + pos.y + "\" start.");
+                //Thread.Sleep(300);
+                click(pos);
+                StaticLog4NetLogger.commandExecutorLogger.Info("click-p \"" + pos.x + "," + pos.y + "\" succeed.");
+                cmdMutex.ReleaseMutex();
+            }
+            catch (FTBAutoTestException excp)
+            {
+                StaticLog4NetLogger.commandExecutorLogger.Warn("click-p \"" + pos.x + "," + pos.y + "\" failed.\nReason:" + excp.Message);
+                cmdMutex.ReleaseMutex();
+                throw excp;
+            }
         }
+
+        protected abstract void click(Position pos);
     }
 }
