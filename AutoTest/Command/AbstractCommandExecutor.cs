@@ -1,20 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace AutoTest
+namespace Tool.Command
 {
-    public partial class Form1 : Form
+    abstract class AbstractCommandExecutor
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        protected static Mutex cmdMutex = new Mutex();
+        public abstract void execute(object param = null);
     }
 }
