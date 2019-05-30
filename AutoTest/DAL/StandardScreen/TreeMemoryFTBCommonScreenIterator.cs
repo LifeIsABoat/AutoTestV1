@@ -1,20 +1,49 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace AutoTest
+namespace Tool.DAL
 {
-    public partial class Form1 : Form
+    class TreeMemoryFTBCommonScreenIterator : IIterator
     {
-        public Form1()
+        public int ScreenIndex { get; set; }
+        private ScreenMemoryCommonAggregate screenMemoryAggregate;
+
+        public TreeMemoryFTBCommonScreenIterator(ScreenMemoryCommonAggregate aggregate)
         {
-            InitializeComponent();
+            screenMemoryAggregate = aggregate;
         }
+
+        void IIterator.first()
+        {
+            ScreenIndex = 0;
+        }
+
+        void IIterator.next()
+        {
+            if (ScreenIndex < screenMemoryAggregate.standardScreen.Count)
+            {
+                ScreenIndex++;
+            }
+        }
+        bool IIterator.isDone()
+        {
+            if (ScreenIndex >= screenMemoryAggregate.standardScreen.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        int IIterator.currentItem()
+        {
+            return ScreenIndex;
+        }
+
     }
 }
