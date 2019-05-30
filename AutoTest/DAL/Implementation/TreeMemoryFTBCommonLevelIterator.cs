@@ -1,20 +1,51 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace AutoTest
+namespace Tool.DAL
 {
-    public partial class Form1 : Form
+    /*
+     *  Description: Iterator manipulation interface of Implementation class
+     */
+    class TreeMemoryFTBCommonLevelIterator : IIterator
     {
-        public Form1()
+        public int levelIndex { get; set; }
+        private TreeMemoryFTBCommonAggregate treeMemoryAggregate;
+
+        public TreeMemoryFTBCommonLevelIterator(TreeMemoryFTBCommonAggregate aggregate)
         {
-            InitializeComponent();
+            treeMemoryAggregate = aggregate;
+        }
+
+        void IIterator.first()
+        {
+            levelIndex = 0;
+        }
+
+        void IIterator.next()
+        {
+            if (levelIndex < treeMemoryAggregate.levelCompositeIndexes.Count)
+            {
+                levelIndex++;
+            }
+        }
+        bool IIterator.isDone()
+        {
+            if (levelIndex >= treeMemoryAggregate.levelCompositeIndexes.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        int IIterator.currentItem()
+        {
+            return levelIndex;
         }
     }
 }
