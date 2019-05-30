@@ -1,20 +1,28 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace AutoTest
+namespace Tool.DAL
 {
-    public partial class Form1 : Form
+    interface IScreenCommonAggregate
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        /*
+        *  Description: Loaded the Aggregateof data
+        *  Return: 
+        *  Exception: 
+        *  Example:aggregate.import();
+        */
+        void importScreen(string path);
+
+        /*
+         *  Description: Create an iterator
+         *  Param: type - iterator type
+         *  Return: IIterator
+         *  Exception: 
+         *  Example: screenIterator = aggregate.createSelectedTcIterator(type);
+         */
+        IIterator createScreenIterator();
     }
 }
