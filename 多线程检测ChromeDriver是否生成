@@ -14,9 +14,7 @@
         {
             ChromeDriverService cds = ChromeDriverService.CreateDefaultService();
             ChromeOptions chromeOp = new ChromeOptions();
-            //chromeOp.AddArgument("--user-data-dir=C://Users//louwi//AppData//Local//Google//Chrome//User Data");
             chromeOp.AddArgument("lang=en-us");
-            //全屏运行浏览器
             chromeOp.AddArgument("--start-maximized");
             cds.Port = PORT;
             ewsdriver = new ChromeDriver(cds, chromeOp);
@@ -47,16 +45,13 @@
                     foreach (Process item in proc)
                         item.Kill();
                 }
-                catch
-                { }
+                catch { }
                 try
                 {
                     Process[] proc = Process.GetProcessesByName("chrome");
                     foreach (Process item in proc)
                         item.Kill();
                 }
-                catch
-                { }
-                GetCommIF();
+                catch { }
             }
         }
