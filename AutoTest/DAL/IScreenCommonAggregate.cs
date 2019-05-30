@@ -1,20 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Tool.UI;
 
-namespace AutoTest
+namespace Tool.DAL
 {
-    public partial class Form1 : Form
+    interface IScreenCommonAPI : IScreenCommonAggregate
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        int getScreenLines();
+        List<string> getScreenCondition(int currentIndex);
+        List<string> getScreenPath(int currentIndex);
+        List<string> getScreenWords(int currentIndex);
+        int getScreenCount();
+        List<StandardScreen> getNowStandardScreen();
     }
 }
