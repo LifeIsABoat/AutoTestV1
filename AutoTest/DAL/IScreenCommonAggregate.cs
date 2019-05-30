@@ -3,17 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tool.UI;
 
 namespace Tool.DAL
 {
-    interface IScreenCommonAPI : IScreenCommonAggregate
+    interface IScreenCommonAggregate
     {
-        int getScreenLines();
-        List<string> getScreenCondition(int currentIndex);
-        List<string> getScreenPath(int currentIndex);
-        List<string> getScreenWords(int currentIndex);
-        int getScreenCount();
-        List<StandardScreen> getNowStandardScreen();
+        /*
+        *  Description: Loaded the Aggregateof data
+        *  Return: 
+        *  Exception: 
+        *  Example:aggregate.import();
+        */
+        void importScreen(string path);
+
+        /*
+         *  Description: Create an iterator
+         *  Param: type - iterator type
+         *  Return: IIterator
+         *  Exception: 
+         *  Example: screenIterator = aggregate.createSelectedTcIterator(type);
+         */
+        IIterator createScreenIterator();
     }
 }
