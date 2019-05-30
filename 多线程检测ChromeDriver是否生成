@@ -1,0 +1,62 @@
+        //新线程=>生成driver（启动浏览器窗口），此过程有几率会卡在启动 窗口
+        //主线程=>检查driver生成是否成功
+        private void CreateDriver()
+        {
+            driverCreatedFlag = false;
+            Thread t1 = new Thread(new ThreadStart(CreateDriverThread));
+            t1.Start();
+            WaitDriverCreation(t1);
+            
+        }
+
+        //生成driver（启动浏览器窗口），此过程有几率会卡在启动 窗口
+        private void CreateDriverThread()
+        {
+            ChromeDriverService cds = ChromeDriverService.CreateDefaultService();
+            ChromeOptions chromeOp = new ChromeOptions();
+            //chromeOp.AddArgument("--user-data-dir=C://Users//louwi//AppData//Local//Google//Chrome//User Data");
+            chromeOp.AddArgument("lang=en-us");
+            //全屏运行浏览器
+            chromeOp.AddArgument("--start-maximized");
+            cds.Port = PORT;
+            ewsdriver = new ChromeDriver(cds, chromeOp);
+            driverCreatedFlag = true;
+        }
+
+        //检查driver生成是否成功
+        //TIMELIMIT:seconds, sleepTime:ms
+        private void WaitDriverCreation(Thread t1, int timeLimit = 10, int sleepTime = 100)
+        {
+            int count = 0;
+            int countLimit = (1000 / sleepTime) * timeLimit;
+
+            while (!driverCreatedFlag)
+            {
+                if (count > countLimit)
+                    break;
+                Thread.Sleep(sleepTime);
+                count++;
+            }
+
+            if (!driverCreatedFlag)
+            {
+                t1.Abort();
+                try
+                {
+                    Process[] proc = Process.GetProcessesByName("chromedriver");
+                    foreach (Process item in proc)
+                        item.Kill();
+                }
+                catch
+                { }
+                try
+                {
+                    Process[] proc = Process.GetProcessesByName("chrome");
+                    foreach (Process item in proc)
+                        item.Kill();
+                }
+                catch
+                { }
+                GetCommIF();
+            }
+        }
