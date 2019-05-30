@@ -1,20 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace AutoTest
+namespace Tool.DAL
 {
-    public partial class Form1 : Form
+    /*
+     *  Description: Import data manipulation interface
+     */
+    interface IFTBCommonAggregateImport
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        /*
+         *  Description: Set the need object of import data
+         *  Param: aggregate - Need object of import data
+         *  Return: 
+         *  Exception: 
+         *  Example:commonAggregateImport.import(aggregate);
+         */
+        void import(IFTBCommonAggregate aggregate);
     }
 }
