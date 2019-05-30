@@ -1,20 +1,24 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace AutoTest
+namespace Tool.DAL
 {
-    public partial class Form1 : Form
+   /*
+    *  Description:FTB LableInfo
+    */
+    public class LableInfo
     {
-        public Form1()
+        public string functionName { get; set; }
+        public string usWords { get; set; }
+        public string stringId { get; set; }
+
+        public LableInfo(string usWords,string functionName="", string stringId="" )
         {
-            InitializeComponent();
+            this.functionName = functionName;
+            this.stringId = stringId;
+            this.usWords = usWords;
         }
     }
 }
