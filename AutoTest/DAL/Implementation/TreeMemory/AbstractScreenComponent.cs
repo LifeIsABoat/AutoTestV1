@@ -1,20 +1,48 @@
-﻿using System;
+/*
+ * File Name: Tree.cs
+ * Creat Date: 2017-3-22
+ * Description: 
+ * Modify Content:
+ */
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace AutoTest
+namespace Tool.DAL
 {
-    public partial class Form1 : Form
+    /*
+     * Description: Base class for combination mode
+     */
+    public abstract class AbstractScreenComponent
     {
-        public Form1()
+        //Point father node
+        public AbstractScreenComponent parents;
+        //Objects of type FTBButtonInfo
+        public ButtonInfo ftbButton;
+        public List<string> stringHelpInfoList;
+
+        public AbstractScreenComponent()
         {
-            InitializeComponent();
+            ftbButton = null;
+            parents = null;
         }
-    }
+
+   
+        /* 
+         *  Description:The constructor
+         *  Param:ftbButton - Objects of type FTBButtonInfo assignment to ftbButton
+         *  Return:
+         *  Exception:
+         *  Example:
+         */
+        public AbstractScreenComponent(ButtonInfo ftbButton)
+            : this()
+        {
+            parents = null;
+            this.ftbButton = ftbButton;
+        }
+        public abstract void addScreenComponent(AbstractScreenComponent screenComponent);
+    }//class
 }
