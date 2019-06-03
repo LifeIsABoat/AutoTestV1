@@ -1,0 +1,14 @@
+*** Variables ***
+@{Head}    Address    Type    Number/ E-mail Address    Name
+#CaseNo.1
+@{addressPath1}   Address\ Book    Address\ 1-10
+@{Row1}    \#01    E-mail Address    123    name001
+#CaseNo.2
+@{addressPath2}   Address\ Book    Address\ 91-100
+@{Row2}    \#100    E-mail Address    300    name300
+#CaseNo.3
+@{addressPath3}   Address\ Book    Address\ 21-30
+@{Row3}    \#23    E-mail Address    123    name023
+#CaseNo.4
+@{addressPath4}   Address\ Book    Address\ 21-30
+@{Row4}    \#24    E-mail Address    124    name024
