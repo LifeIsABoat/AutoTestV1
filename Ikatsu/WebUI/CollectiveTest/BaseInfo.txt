@@ -1,0 +1,5 @@
+*** Variables ***
+${MachineA_IP}    10.244.4.42
+${MachineA_PWD}    initpass
+${MachineB_IP}    10.244.4.42
+${MachineB_PWD}    initpass
