@@ -1,0 +1,80 @@
+${CaseNo.2}    Condition1
+@{TestPath_Condition1}    Administrator    User Restriction Function
+@{OptionValue_Condition1}    Active Directory Authentication
+@{OptionIndex_Condition1}    0
+${CaseNo.3}    2-3-3
+@{TestPath_2-3-3}    Administrator    Active Directory Authentication    Storage PC Print Data
+@{OptionValue_2-3-3}    On
+@{OptionIndex_2-3-3}    0
+${CaseNo.4}    2-3-4
+@{TestPath_2-3-4}    Administrator    Active Directory Authentication    Storage Fax RX Data
+@{OptionValue_2-3-4}    On
+@{OptionIndex_2-3-4}    0
+${CaseNo.5}    2-3-5
+@{TestPath_2-3-5}    Administrator    Active Directory Authentication    Remember User ID
+@{OptionValue_2-3-5}    On
+@{OptionIndex_2-3-5}    0
+${CaseNo.6}    2-3-6
+@{TestPath_2-3-6}    Administrator    Active Directory Authentication    Active Directory Server Settings    Active Directory Server Address
+@{OptionValue_2-3-6}    10.244.8.8
+@{OptionIndex_2-3-6}    0
+${CaseNo.7}    2-3-7
+@{TestPath_2-3-7}    Administrator    Active Directory Authentication    Active Directory Server Settings    Active Directory Domain Name
+@{OptionValue_2-3-7}    TestName
+@{OptionIndex_2-3-7}    0
+${CaseNo.8}    2-3-9
+@{TestPath_2-3-9}    Administrator    Active Directory Authentication    Active Directory Server Settings    Get Mail Address
+@{OptionValue_2-3-9}    Off
+@{OptionIndex_2-3-9}    0
+${CaseNo.9}    2-3-10
+@{TestPath_2-3-10}    Administrator    Active Directory Authentication    Active Directory Server Settings    Get User's Home Directory
+@{OptionValue_2-3-10}    Off
+@{OptionIndex_2-3-10}    0
+${CaseNo.10}    2-3-11
+@{TestPath_2-3-11}    Administrator    Active Directory Authentication    Active Directory Server Settings    LDAP Server Port
+@{OptionValue_2-3-11}    888
+@{OptionIndex_2-3-11}    0
+${CaseNo.11}    2-3-12
+@{TestPath_2-3-12}    Administrator    Active Directory Authentication    Active Directory Server Settings    LDAP Search Root
+@{OptionValue_2-3-12}    CN=$firstName
+@{OptionIndex_2-3-12}    0
+${CaseNo.12}    Condition2
+@{TestPath_Condition2}    Administrator    User Restriction Function
+@{OptionValue_Condition2}    LDAP Authentication
+@{OptionIndex_Condition2}    0
+${CaseNo.13}    2-3-13
+@{TestPath_2-3-13}    Administrator    LDAP Authentication    Storage PC Print Data
+@{OptionValue_2-3-13}    On
+@{OptionIndex_2-3-13}    0
+${CaseNo.14}    2-3-14
+@{TestPath_2-3-14}    Administrator    LDAP Authentication    Storage Fax RX Data
+@{OptionValue_2-3-14}    On
+@{OptionIndex_2-3-14}    0
+${CaseNo.15}    2-3-15
+@{TestPath_2-3-15}    Administrator    LDAP Authentication    Remember User ID
+@{OptionValue_2-3-15}    On
+@{OptionIndex_2-3-15}    0
+${CaseNo.16}    2-3-16
+@{TestPath_2-3-16}    Administrator    LDAP Authentication    LDAP Server Settings    LDAP Server Address
+@{OptionValue_2-3-16}    10.244.8.8
+@{OptionIndex_2-3-16}    0
+${CaseNo.17}    2-3-17
+@{TestPath_2-3-17}    Administrator    LDAP Authentication    LDAP Server Settings    Get Mail Address
+@{OptionValue_2-3-17}    Off
+@{OptionIndex_2-3-17}    0
+${CaseNo.18}    2-3-18
+@{TestPath_2-3-18}    Administrator    LDAP Authentication    LDAP Server Settings    Get User's Home Directory
+@{OptionValue_2-3-18}    Off
+@{OptionIndex_2-3-18}    0
+${CaseNo.19}    2-3-19
+@{TestPath_2-3-19}    Administrator    LDAP Authentication    LDAP Server Settings    LDAP Server Port
+@{OptionValue_2-3-19}    888
+@{OptionIndex_2-3-19}    0
+${CaseNo.20}    2-3-20
+@{TestPath_2-3-20}    Administrator    LDAP Authentication    LDAP Server Settings    LDAP Search Root
+@{OptionValue_2-3-20}    CN=$firstName
+@{OptionIndex_2-3-20}    0
+${CaseNo.21}    2-3-21
+@{TestPath_2-3-21}    Administrator    LDAP Authentication    LDAP Server Settings    Attribute of Name (Search Key)
+@{OptionValue_2-3-21}    name
+@{OptionIndex_2-3-21}    1
