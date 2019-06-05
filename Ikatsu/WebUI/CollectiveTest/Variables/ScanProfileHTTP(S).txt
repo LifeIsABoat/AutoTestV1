@@ -1,0 +1,66 @@
+*** Variables ***
+@{PathMain}=	Scan	Scan to FTP/SFTP/Network/SharePoint/HTTP\(S\)\ Profile
+${ProfileName}=    Profile\ 5
+@{Path1}=    Profile\ Name
+${Value1}=    name123
+${Index1}=    0
+@{Path2}=    URL
+${Value2}=    http://www.brother.co.jp
+${Index2}=    0
+@{Path3}=    Method
+${Value3}=    PUT
+${Index3}=    0
+@{Path5}=    Quality
+${Value5}=    Color\ 200\ dpi
+${Index5}=    0
+@{Path6}=    File\ Type
+${Value6}=    PDF Single-Page
+${Index6}=    0
+@{Path7}=    Document\ Size
+${Value7}=    Letter
+${Index7}=    0
+@{Path8}=    File\ Size
+${Value8}=    Small
+${Index8}=    0
+@{Path9}=    ADF\ Auto\ Deskew
+${Value9}=    Auto
+${Index9}=    0
+@{Path10}=    Skip\ Blank\ Page
+${Value10}=    On
+${Index10}=    0
+@{Path11}=    Skip\ Blank\ Page\ Sensitivity
+${Value11}=    \-2
+${Index11}=    0
+@{Path12}=    2-sided\ Scan
+${Value12}=    Long Edge
+${Index12}=    0
+@{Path13}=    Remove Background Color
+${Value13}=    Low
+${Index13}=    0
+@{Path14}=    Brightness
+${Value14}=    \-50
+${Index14}=    0
+@{Path15}=    Contrast
+${Value15}=    \-50
+${Index15}=    0
+@{Path16}=    Use\ PIN\ for\ Authentication
+${Value16}=    On
+${Index16}=    0
+@{Path17}=    PIN Code
+${Value17}=    0000
+${Index17}=    0
+@{Head}    Number    Name    Value
+@{httpHeaderPath}   HTTP\ Header
+@{Row1}    1    name1    value1
+@{Row2}    2    name2    value2
+@{Row3}    3    name3    value3
+@{Row4}    4    name4    value4
+@{Row5}    5    name5    value5
+@{Row6}    6    name6    value6
+@{BodyPath}=    Body
+${BodyValue}=    http://www.brother.co.jp
+${BodyIndex}=    0
+${AuthenticationSettingPath}=    Authentication\ Setting
+${UsernamePath}=    Username
+${UsernameValue}=    oneUser
+${UsernameIndex}=    0
