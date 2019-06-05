@@ -1,0 +1,17 @@
+*** Variables ***
+@{Head}    Group    Address\ \#    Name
+#CaseNo.1
+@{GroupPath1}    Address\ Book    Setup\ Groups\ G1-G6
+@{Row1}    G1    \#05    name05
+${Row_Path1}    Address\ Book
+@{Row_Member1}    \#01
+#CaseNo.2
+@{GroupPath2}    Address\ Book    Setup\ Groups\ G1-G6
+@{Row2}    G6    \#95    name95
+${Row_Path2}    Address\ Book
+@{Row_Member2}    \#23
+#CaseNo.3
+@{GroupPath3}    Address\ Book    Setup\ Groups\ G1-G6
+@{Row3}    G3    \#25    name025
+${Row_Path3}    Address\ Book
+@{Row_Member3}    \#24
