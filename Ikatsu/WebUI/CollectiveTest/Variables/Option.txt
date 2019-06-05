@@ -1,0 +1,1089 @@
+*** Variables ***
+${TestCase}    1-1-2
+@{TestPath_1-1-2}    General    Contact & Location    Contact
+@{OptionValue_1-1-2}    12
+@{OptionIndex_1-1-2}    0
+${TestCase}    1-1-3
+@{TestPath_1-1-3}    General    Contact & Location    Location
+@{OptionValue_1-1-3}    123
+@{OptionIndex_1-1-3}    0
+${TestCase}    1-1-4
+@{TestPath_1-1-4}    General    Sleep Time    Sleep Time
+@{OptionValue_1-1-4}    10 Mins
+@{OptionIndex_1-1-4}    0
+${TestCase}    1-1-5
+@{TestPath_1-1-5}    General    Auto Power Off    Auto Power Off
+@{OptionValue_1-1-5}    Off
+@{OptionIndex_1-1-5}    0
+${TestCase}    1-1-6
+@{TestPath_1-1-6}    General    Volume    Ring
+@{OptionValue_1-1-6}    Off
+@{OptionIndex_1-1-6}    0
+${TestCase}    1-1-7
+@{TestPath_1-1-7}    General    Volume    Beep
+@{OptionValue_1-1-7}    Off
+@{OptionIndex_1-1-7}    0
+${TestCase}    1-1-8
+@{TestPath_1-1-8}    General    Volume    Speaker
+@{OptionValue_1-1-8}    Off
+@{OptionIndex_1-1-8}    0
+${TestCase}    1-1-9
+@{TestPath_1-1-9}    General    Panel    Backlight
+@{OptionValue_1-1-9}    Med
+@{OptionIndex_1-1-9}    0
+${TestCase}    1-1-10
+@{TestPath_1-1-10}    General    Panel    Dim Timer
+@{OptionValue_1-1-10}    1 Min
+@{OptionIndex_1-1-10}    0
+${TestCase}    1-1-15
+@{TestPath_1-1-15}    General    Notification    Document Alert
+@{OptionValue_1-1-15}    Off
+@{OptionIndex_1-1-15}    0
+${TestCase}    1-1-16
+@{TestPath_1-1-16}    General    Notification    Copy Tip
+@{OptionValue_1-1-16}    Off
+@{OptionIndex_1-1-16}    0
+${TestCase}    1-1-17
+@{TestPath_1-1-17}    General    Notification    Scan Result(Skip Blank Page)
+@{OptionValue_1-1-17}    On
+@{OptionIndex_1-1-17}    0
+${TestCase}    1-2-1
+@{TestPath_1-2-1}    Fax    Fax    Station ID    Fax Number
+@{OptionValue_1-2-1}    147
+@{OptionIndex_1-2-1}    0
+${TestCase}    1-2-2
+@{TestPath_1-2-2}    Fax    Fax    Station ID    Tel Number
+@{OptionValue_1-2-2}    258
+@{OptionIndex_1-2-2}    0
+${TestCase}    1-2-3
+@{TestPath_1-2-3}    Fax    Fax    Station ID    Name
+@{OptionValue_1-2-3}    369
+@{OptionIndex_1-2-3}    0
+${TestCase}    1-2-4
+@{TestPath_1-2-4}    Fax    Fax    Dial Type
+@{OptionValue_1-2-4}    Tone
+@{OptionIndex_1-2-4}    0
+${TestCase}    1-2-5
+@{TestPath_1-2-5}    Fax    Fax    Caller ID
+@{OptionValue_1-2-5}    External Tel
+@{OptionIndex_1-2-5}    0
+${TestCase}    1-2-6
+@{TestPath_1-2-6}    Fax    Fax    Tone/Pulse
+@{OptionValue_1-2-6}    Pulse
+@{OptionIndex_1-2-6}    0
+${TestCase}    1-2-7
+@{TestPath_1-2-7}    Fax    Fax    Dial Tone
+@{OptionValue_1-2-7}    Detection
+@{OptionIndex_1-2-7}    0
+${TestCase}    1-2-8
+@{TestPath_1-2-8}    Fax    Fax    Phone Line Set
+@{OptionValue_1-2-8}    PBX
+@{OptionIndex_1-2-8}    0
+${TestCase}    1-2-9
+@{TestPath_1-2-9}    Fax    Fax    Dial Prefix
+@{OptionValue_1-2-9}    On
+@{OptionIndex_1-2-9}    0
+${TestCase}    1-2-10
+@{TestPath_1-2-10}    Fax    Fax    Dial Prefix
+@{OptionValue_1-2-10}    9
+@{OptionIndex_1-2-10}    1
+${TestCase}    1-2-11
+@{TestPath_1-2-11}    Fax    Fax    PBX
+@{OptionValue_1-2-11}    Always
+@{OptionIndex_1-2-11}    0
+${TestCase}    1-2-12
+@{TestPath_1-2-12}    Fax    Fax    Setup Receive    Receive Mode
+@{OptionValue_1-2-12}    External TAD
+@{OptionIndex_1-2-12}    0
+${TestCase}    1-2-13
+@{TestPath_1-2-13}    Fax    Fax    Setup Receive    Ring Delay
+@{OptionValue_1-2-13}    3
+@{OptionIndex_1-2-13}    0
+${TestCase}    1-2-14
+@{TestPath_1-2-14}    Fax    Fax    Setup Receive    Fax/Tel Ring Time
+@{OptionValue_1-2-14}    70
+@{OptionIndex_1-2-14}    0
+${TestCase}    1-2-16
+@{TestPath_1-2-16}    Fax    Fax    Setup Receive    Easy Receive
+@{OptionValue_1-2-16}    Off
+@{OptionIndex_1-2-16}    0
+${TestCase}    1-2-17
+@{TestPath_1-2-17}    Fax    Fax    Setup Receive    Remote Codes    Remote Codes
+@{OptionValue_1-2-17}    Off
+@{OptionIndex_1-2-17}    0
+${TestCase}    1-2-18
+@{TestPath_1-2-18}    Fax    Fax    Setup Receive    Remote Codes    Fax Receive
+@{OptionValue_1-2-18}    *12
+@{OptionIndex_1-2-18}    0
+${TestCase}    1-2-19
+@{TestPath_1-2-19}    Fax    Fax    Setup Receive    Remote Codes    Tel Answer
+@{OptionValue_1-2-19}    111
+@{OptionIndex_1-2-19}    0
+${TestCase}    1-2-20
+@{TestPath_1-2-20}    Fax    Fax    Setup Receive    Auto Reduction
+@{OptionValue_1-2-20}    Off
+@{OptionIndex_1-2-20}    0
+${TestCase}    1-2-21
+@{TestPath_1-2-21}    Fax    Fax    Setup Receive    2-sided
+@{OptionValue_1-2-21}    On
+@{OptionIndex_1-2-21}    0
+${TestCase}    1-2-22
+@{TestPath_1-2-22}    Fax    Fax    Setup Receive    Fax RX Stamp
+@{OptionValue_1-2-22}    Off
+@{OptionIndex_1-2-22}    0
+${TestCase}    1-2-24
+@{TestPath_1-2-24}    Fax    Fax    Setup Send    Fax Resolution
+@{OptionValue_1-2-24}    Fine
+@{OptionIndex_1-2-24}    0
+${TestCase}    1-2-25
+@{TestPath_1-2-25}    Fax    Fax    Setup Send    Contrast
+@{OptionValue_1-2-25}    Darken
+@{OptionIndex_1-2-25}    0
+${TestCase}    1-2-81
+@{TestPath_1-2-81}    Fax    Fax    Setup Send    Color Setting
+@{OptionValue_1-2-81}    Color
+@{OptionIndex_1-2-81}    0
+${TestCase}    1-2-26
+@{TestPath_1-2-26}    Fax    Fax    Setup Send    Document Size
+@{OptionValue_1-2-26}    A4
+@{OptionIndex_1-2-26}    0
+${TestCase}    1-2-27
+@{TestPath_1-2-27}    Fax    Fax    Setup Send    Batch Tx
+@{OptionValue_1-2-27}    On
+@{OptionIndex_1-2-27}    0
+${TestCase}    1-2-28
+@{TestPath_1-2-28}    Fax    Fax    Setup Send    Real Time TX
+@{OptionValue_1-2-28}    On
+@{OptionIndex_1-2-28}    0
+${TestCase}    1-2-32
+@{TestPath_1-2-32}    Fax    Fax    Setup Send    Destination
+@{OptionValue_1-2-32}    Hidden
+@{OptionIndex_1-2-32}    0
+${TestCase}    1-2-33
+@{TestPath_1-2-33}    Fax    Fax    Setup Send    Auto Redial
+@{OptionValue_1-2-33}    Off
+@{OptionIndex_1-2-33}    0
+${TestCase}    1-2-34
+@{TestPath_1-2-34}    Fax    Fax    Setup Send    Overseas Mode
+@{OptionValue_1-2-34}    On
+@{OptionIndex_1-2-34}    0
+${TestCase}    1-2-35
+@{TestPath_1-2-35}    Fax    Fax    Report    Transmission
+@{OptionValue_1-2-35}    Off
+@{OptionIndex_1-2-35}    0
+${TestCase}    1-2-36
+@{TestPath_1-2-36}    Fax    Fax    Report    Journal Period    Interval
+@{OptionValue_1-2-36}    Every 2 days
+@{OptionIndex_1-2-36}    0
+${TestCase}    1-2-37-1
+@{TestPath_1-2-37-1}    Fax    Fax    Report    Journal Period    Start Time
+@{OptionValue_1-2-37-1}    08
+@{OptionIndex_1-2-37-1}    0
+${TestCase}    1-2-37-2
+@{TestPath_1-2-37-2}    Fax    Fax    Report    Journal Period    Start Time
+@{OptionValue_1-2-37-2}    00
+@{OptionIndex_1-2-37-2}    1
+${TestCase}    1-2-39
+@{TestPath_1-2-39}    Fax    Fax    Remote Fax Options    Fwd/Store/Cloud
+@{OptionValue_1-2-39}    Pc Fax Receive
+@{OptionIndex_1-2-39}    0
+${TestCase}    1-2-43
+@{TestPath_1-2-43}    Fax    Fax    Remote Fax Options    Backup print
+@{OptionValue_1-2-43}    Off
+@{OptionIndex_1-2-43}    0
+${TestCase}    1-2-46
+@{TestPath_1-2-46}    Fax    Fax    Remote Fax Options    Remote Access Code
+@{OptionValue_1-2-46}    123
+@{OptionIndex_1-2-46}    0
+${TestCase}    1-2-47
+@{TestPath_1-2-47}    Fax    Fax    Dial Restriction    Dial Pad
+@{OptionValue_1-2-47}    On
+@{OptionIndex_1-2-47}    0
+${TestCase}    1-2-49
+@{TestPath_1-2-49}    Fax    Fax    Dial Restriction    Address Book
+@{OptionValue_1-2-49}    On
+@{OptionIndex_1-2-49}    0
+${TestCase}    1-2-50
+@{TestPath_1-2-50}    Fax    Fax    Dial Restriction    Shortcut
+@{OptionValue_1-2-50}    On
+@{OptionIndex_1-2-50}    0
+${TestCase}    1-2-51
+@{TestPath_1-2-51}    Fax    Fax    Dial Restriction    LDAP Server
+@{OptionValue_1-2-51}    On
+@{OptionIndex_1-2-51}    0
+${TestCase}    1-2-52
+@{TestPath_1-2-52}    Fax    Fax    Miscellaneous    Compatibility
+@{OptionValue_1-2-52}    Normal
+@{OptionIndex_1-2-52}    0
+${TestCase}    1-2-55
+@{TestPath_1-2-55}    Fax    I-Fax    E-mail Send    E-mail Subject
+@{OptionValue_1-2-55}    E-mail Subject AutoTest
+@{OptionIndex_1-2-55}    0
+${TestCase}    1-2-56
+@{TestPath_1-2-56}    Fax    I-Fax    E-mail Send    E-mail Message
+@{OptionValue_1-2-56}    Image data has been attached.
+@{OptionIndex_1-2-56}    0
+${TestCase}    1-2-57
+@{TestPath_1-2-57}    Fax    I-Fax    E-mail Send    Size Limit
+@{OptionValue_1-2-57}    On
+@{OptionIndex_1-2-57}    0
+${TestCase}    1-2-58
+@{TestPath_1-2-58}    Fax    I-Fax    E-mail Send    Maximum Size
+@{OptionValue_1-2-58}    2
+@{OptionIndex_1-2-58}    0
+${TestCase}    1-2-59
+@{TestPath_1-2-59}    Fax    I-Fax    E-mail Send    Request Delivery Notification (Send)
+@{OptionValue_1-2-59}    On
+@{OptionIndex_1-2-59}    0
+${TestCase}    1-2-60
+@{TestPath_1-2-60}    Fax    I-Fax    E-mail Receive    Auto Polling
+@{OptionValue_1-2-60}    Off
+@{OptionIndex_1-2-60}    0
+${TestCase}    1-2-61
+@{TestPath_1-2-61}    Fax    I-Fax    E-mail Receive    Polling Frequency
+@{OptionValue_1-2-61}    1 Min
+@{OptionIndex_1-2-61}    0
+${TestCase}    1-2-62
+@{TestPath_1-2-62}    Fax    I-Fax    E-mail Receive    Print Mail Header
+@{OptionValue_1-2-62}    All
+@{OptionIndex_1-2-62}    0
+${TestCase}    1-2-63
+@{TestPath_1-2-63}    Fax    I-Fax    E-mail Receive    Delete/Read Receive Error Mail
+@{OptionValue_1-2-63}    Off
+@{OptionIndex_1-2-63}    0
+${TestCase}    1-2-64
+@{TestPath_1-2-64}    Fax    I-Fax    E-mail Receive    Send Delivery Notification (Receive)
+@{OptionValue_1-2-64}    On
+@{OptionIndex_1-2-64}    0
+${TestCase}    1-2-65
+@{TestPath_1-2-65}    Fax    I-Fax    Relay Function    Relay Broadcast Function
+@{OptionValue_1-2-65}    On
+@{OptionIndex_1-2-65}    0
+${TestCase}    1-2-66
+@{TestPath_1-2-66}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-66}    aaa
+@{OptionIndex_1-2-66}    0
+${TestCase}    1-2-67
+@{TestPath_1-2-67}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-67}    bbb
+@{OptionIndex_1-2-67}    1
+${TestCase}    1-2-68
+@{TestPath_1-2-68}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-68}    ccc
+@{OptionIndex_1-2-68}    2
+${TestCase}    1-2-69
+@{TestPath_1-2-69}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-69}    ddd
+@{OptionIndex_1-2-69}    3
+${TestCase}    1-2-70
+@{TestPath_1-2-70}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-70}    eeeee
+@{OptionIndex_1-2-70}    4
+${TestCase}    1-2-71
+@{TestPath_1-2-71}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-71}    bbb
+@{OptionIndex_1-2-71}    5
+${TestCase}    1-2-72
+@{TestPath_1-2-72}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-72}    ccc
+@{OptionIndex_1-2-72}    6
+${TestCase}    1-2-73
+@{TestPath_1-2-73}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-73}    ddd
+@{OptionIndex_1-2-73}    7
+${TestCase}    1-2-74
+@{TestPath_1-2-74}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-74}    eee
+@{OptionIndex_1-2-74}    8
+${TestCase}    1-2-75
+@{TestPath_1-2-75}    Fax    I-Fax    Relay Function    Relay Domain
+@{OptionValue_1-2-75}    fff
+@{OptionIndex_1-2-75}    9
+${TestCase}    1-2-76
+@{TestPath_1-2-76}    Fax    I-Fax    Relay Function    Relay Broadcast Report
+@{OptionValue_1-2-76}    On
+@{OptionIndex_1-2-76}    0
+${TestCase}    1-2-77
+@{TestPath_1-2-77}    Fax    I-Fax    Fax to Server    Fax to Server
+@{OptionValue_1-2-77}    On
+@{OptionIndex_1-2-77}    0
+${TestCase}    1-2-78
+@{TestPath_1-2-78}    Fax    I-Fax    Fax to Server    Prefix
+@{OptionValue_1-2-78}    aaa
+@{OptionIndex_1-2-78}    0
+${TestCase}    1-2-79
+@{TestPath_1-2-79}    Fax    I-Fax    Fax to Server    Suffix
+@{OptionValue_1-2-79}    bbb
+@{OptionIndex_1-2-79}    0
+${TestCase}    1-3-1
+@{TestPath_1-3-1}    Copy    Copy    Quality
+@{OptionValue_1-3-1}    Text
+@{OptionIndex_1-3-1}    0
+${TestCase}    1-3-3
+@{TestPath_1-3-3}    Copy    Copy    Density
+@{OptionValue_1-3-3}    -1
+@{OptionIndex_1-3-3}    0
+${TestCase}    1-3-4
+@{TestPath_1-3-4}    Copy    Copy    Contrast
+@{OptionValue_1-3-4}    -1
+@{OptionIndex_1-3-4}    0
+${TestCase}    1-3-9
+@{TestPath_1-3-9}    Copy    Copy    Color Adjust    Red
+@{OptionValue_1-3-9}    -2
+@{OptionIndex_1-3-9}    0
+${TestCase}    1-3-10
+@{TestPath_1-3-10}    Copy    Copy    Color Adjust    Green
+@{OptionValue_1-3-10}    -2
+@{OptionIndex_1-3-10}    0
+${TestCase}    1-3-11
+@{TestPath_1-3-11}    Copy    Copy    Color Adjust    Blue
+@{OptionValue_1-3-11}    -2
+@{OptionIndex_1-3-11}    0
+${TestCase}    1-4-1
+@{TestPath_1-4-1}    Print    Print    Toner Save
+@{OptionValue_1-4-1}    On
+@{OptionIndex_1-4-1}    0
+${TestCase}    1-4-2
+@{TestPath_1-4-2}    Print    Print    Quiet Mode
+@{OptionValue_1-4-2}    On
+@{OptionIndex_1-4-2}    0
+${TestCase}    1-4-4
+@{TestPath_1-4-4}    Print    Print    Quality
+@{OptionValue_1-4-4}    Normal
+@{OptionIndex_1-4-4}    0
+${TestCase}    1-4-6
+@{TestPath_1-4-6}    Print    Print    Continue Mode
+@{OptionValue_1-4-6}    Manual
+@{OptionIndex_1-4-6}    0
+${TestCase}    1-4-14
+@{TestPath_1-4-14}    Print    Tray    Paper Type    MP Tray
+@{OptionValue_1-4-14}    Inkjet Paper
+@{OptionIndex_1-4-14}    0
+${TestCase}    1-4-15
+@{TestPath_1-4-15}    Print    Tray    Paper Type    Tray #1
+@{OptionValue_1-4-15}    Inkjet Paper
+@{OptionIndex_1-4-15}    0
+${TestCase}    1-4-20
+@{TestPath_1-4-20}    Print    Tray    Paper Size    MP Tray
+@{OptionValue_1-4-20}    A4
+@{OptionIndex_1-4-20}    0
+${TestCase}    1-4-21
+@{TestPath_1-4-21}    Print    Tray    Paper Size    Tray #1
+@{OptionValue_1-4-21}    A4
+@{OptionIndex_1-4-21}    0
+${TestCase}    1-4-22
+@{TestPath_1-4-22}    Print    Tray    Paper Size    Tray #2
+@{OptionValue_1-4-22}    A4
+@{OptionIndex_1-4-22}    0
+${TestCase}    1-4-26
+@{TestPath_1-4-26}    Print    Tray    Paper Low Notice    Paper Low Notice
+@{OptionValue_1-4-26}    On
+@{OptionIndex_1-4-26}    0
+${TestCase}    1-4-27
+@{TestPath_1-4-27}    Print    Tray    Paper Low Notice    Notice Level
+@{OptionValue_1-4-27}    Low
+@{OptionIndex_1-4-27}    0
+${TestCase}    1-4-28
+@{TestPath_1-4-28}    Print    Tray    Check Paper
+@{OptionValue_1-4-28}    Off
+@{OptionIndex_1-4-28}    0
+${TestCase}    1-4-29
+@{TestPath_1-4-29}    Print    Tray    Tray Use    Copy
+@{OptionValue_1-4-29}    Tray #1 Only
+@{OptionIndex_1-4-29}    0
+${TestCase}    1-4-30
+@{TestPath_1-4-30}    Print    Tray    Tray Use    Fax
+@{OptionValue_1-4-30}    Tray #1 Only
+@{OptionIndex_1-4-30}    0
+${TestCase}    1-4-31
+@{TestPath_1-4-132}    Print    Tray    Tray Use    JPEG Print (Media)
+@{OptionValue_1-4-132}    Auto Select
+@{OptionIndex_1-4-132}    0
+${TestCase}    1-4-133
+@{TestPath_1-4-133}    Print    Tray    Tray Priority    Copy
+@{OptionValue_1-4-133}    MP>T1>T2
+@{OptionIndex_1-4-133}    0
+${TestCase}    1-4-135
+@{TestPath_1-4-135}    Print    Tray    Tray Priority    Fax
+@{OptionValue_1-4-135}    MP>T1>T2
+@{OptionIndex_1-4-135}    0
+${TestCase}    1-4-137
+@{TestPath_1-4-137}    Print    Tray    Tray Priority    Print
+@{OptionValue_1-4-137}    MP>T1>T2
+@{OptionIndex_1-4-137}    0
+${TestCase}    1-4-139
+@{TestPath_1-4-139}    Print    Tray    Tray Priority    JPEG Print (Media)
+@{OptionValue_1-4-139}    T1>MP
+@{OptionIndex_1-4-139}    0
+${TestCase}    1-4-42
+@{TestPath_1-4-42}    Print    2-sided    2-sided Print
+@{OptionValue_1-4-42}    Long Edge
+@{OptionIndex_1-4-42}    0
+${TestCase}    1-4-43
+@{TestPath_1-4-43}    Print    2-sided    Single Image
+@{OptionValue_1-4-43}    2-sided Feed
+@{OptionIndex_1-4-43}    0
+${TestCase}    1-4-44
+@{TestPath_1-4-44}    Print    Output Color    Output Color
+@{OptionValue_1-4-44}    Color
+@{OptionIndex_1-4-44}    0
+${TestCase}    1-4-45
+@{TestPath_1-4-45}    Print    Calibration    a
+@{OptionValue_1-4-45}    Off
+@{OptionIndex_1-4-45}    0
+${TestCase}    1-4-46
+@{TestPath_1-4-46}    Print    Auto Registration    Auto Correct
+@{OptionValue_1-4-46}    Off
+@{OptionIndex_1-4-46}    0
+${TestCase}    1-4-47
+@{TestPath_1-4-47}    Print    ColorSettings    Setting Mode
+@{OptionValue_1-4-47}    Set at Device
+@{OptionIndex_1-4-47}    0
+${TestCase}    1-4-48
+@{TestPath_1-4-48}    Print    ColorSettings    Color Mode
+@{OptionValue_1-4-48}    Vivid
+@{OptionIndex_1-4-48}    0
+${TestCase}    1-4-49
+@{TestPath_1-4-49}    Print    ColorSettings    Improve Gray Color
+@{OptionValue_1-4-49}    Off
+@{OptionIndex_1-4-49}    0
+${TestCase}    1-4-50
+@{TestPath_1-4-50}    Print    ColorSettings    Enhance Black Printing
+@{OptionValue_1-4-50}    On
+@{OptionIndex_1-4-50}    0
+${TestCase}    1-4-51
+@{TestPath_1-4-51}    Print    ColorSettings    Brightness
+@{OptionValue_1-4-51}    -20
+@{OptionIndex_1-4-51}    0
+${TestCase}    1-4-52
+@{TestPath_1-4-52}    Print    ColorSettings    Contrast
+@{OptionValue_1-4-52}    -20
+@{OptionIndex_1-4-52}    0
+${TestCase}    1-4-53
+@{TestPath_1-4-53}    Print    ColorSettings    Red
+@{OptionValue_1-4-53}    -20
+@{OptionIndex_1-4-53}    0
+${TestCase}    1-4-54
+@{TestPath_1-4-54}    Print    ColorSettings    Green
+@{OptionValue_1-4-54}    -20
+@{OptionIndex_1-4-54}    0
+${TestCase}    1-4-55
+@{TestPath_1-4-55}    Print    ColorSettings    Blue
+@{OptionValue_1-4-55}    -20
+@{OptionIndex_1-4-55}    0
+${TestCase}    1-4-56
+@{TestPath_1-4-56}    Print    Direct Print    Paper Size
+@{OptionValue_1-4-56}    A4
+@{OptionIndex_1-4-56}    0
+${TestCase}    1-4-57
+@{TestPath_1-4-57}    Print    Direct Print    Media Type
+@{OptionValue_1-4-57}    Thin Paper
+@{OptionIndex_1-4-57}    0
+${TestCase}    1-4-58
+@{TestPath_1-4-58}    Print    Direct Print    Multiple Page
+@{OptionValue_1-4-58}    2 in 1
+@{OptionIndex_1-4-58}    0
+${TestCase}    1-4-59
+@{TestPath_1-4-59}    Print    Direct Print    Orientation
+@{OptionValue_1-4-59}    Landscape
+@{OptionIndex_1-4-59}    0
+${TestCase}    1-4-60
+@{TestPath_1-4-60}    Print    Direct Print    Collate
+@{OptionValue_1-4-60}    Off
+@{OptionIndex_1-4-60}    0
+${TestCase}    1-4-61
+@{TestPath_1-4-61}    Print    Direct Print    Print Quality
+@{OptionValue_1-4-61}    Fine
+@{OptionIndex_1-4-61}    0
+${TestCase}    1-4-62
+@{TestPath_1-4-62}    Print    Direct Print    PDF Option
+@{OptionValue_1-4-62}    Document & Stamps
+@{OptionIndex_1-4-62}    0
+${TestCase}    1-4-63
+@{TestPath_1-4-63}    Print    Direct Print    Index Print
+@{OptionValue_1-4-63}    Details
+@{OptionIndex_1-4-63}    0
+${TestCase}    1-4-69
+@{TestPath_1-4-69}    Print    Tray    Tray Command
+@{OptionValue_1-4-69}    LJ3
+@{OptionIndex_1-4-69}    0
+${TestCase}    ActiveDirectoryAuthentication
+@{TestPath_Condition1}    Administrator     User Restriction Function
+@{OptionValue_Condition1}    Active Directory Authentication
+@{OptionIndex_Condition1}    0
+${TestCase}    2-3-3
+@{TestPath_2-3-3}    Administrator    Active Directory Authentication    Storage PC Print Data
+@{OptionValue_2-3-3}    On
+@{OptionIndex_2-3-3}    0
+${TestCase}    2-3-4
+@{TestPath_2-3-4}    Administrator    Active Directory Authentication    Storage Fax RX Data
+@{OptionValue_2-3-4}    On
+@{OptionIndex_2-3-4}    0
+${TestCase}    2-3-5
+@{TestPath_2-3-5}    Administrator    Active Directory Authentication    Remember User ID
+@{OptionValue_2-3-5}    On
+@{OptionIndex_2-3-5}    0
+${TestCase}    2-3-6
+@{TestPath_2-3-6}    Administrator    Active Directory Authentication    Active Directory Server Settings    Active Directory Server Address
+@{OptionValue_2-3-6}    10.244.8.8
+@{OptionIndex_2-3-6}    0
+${TestCase}    2-3-7
+@{TestPath_2-3-7}    Administrator    Active Directory Authentication    Active Directory Server Settings    Active Directory Domain Name
+@{OptionValue_2-3-7}    TestName
+@{OptionIndex_2-3-7}    0
+${TestCase}    2-3-9
+@{TestPath_2-3-9}    Administrator    Active Directory Authentication    Active Directory Server Settings    Get Mail Address
+@{OptionValue_2-3-9}    Off
+@{OptionIndex_2-3-9}    0
+${TestCase}    2-3-10
+@{TestPath_2-3-10}    Administrator    Active Directory Authentication    Active Directory Server Settings    Get User's Home Directory
+@{OptionValue_2-3-10}    Off
+@{OptionIndex_2-3-10}    0
+${TestCase}    2-3-11
+@{TestPath_2-3-11}    Administrator    Active Directory Authentication    Active Directory Server Settings    LDAP Server Port
+@{OptionValue_2-3-11}    888
+@{OptionIndex_2-3-11}    0
+${TestCase}    2-3-12
+@{TestPath_2-3-12}    Administrator    Active Directory Authentication    Active Directory Server Settings    LDAP Search Root
+@{OptionValue_2-3-12}    CN=$firstName
+@{OptionIndex_2-3-12}    0
+${TestCase}    LDAPAuthentication
+@{TestPath_Condition2}    Administrator    User Restriction Function
+@{OptionValue_Condition2}    LDAP Authentication
+@{OptionIndex_Condition2}    0
+${TestCase}    2-3-13
+@{TestPath_2-3-13}    Administrator    LDAP Authentication    Storage PC Print Data
+@{OptionValue_2-3-13}    On
+@{OptionIndex_2-3-13}    0
+${TestCase}    2-3-14
+@{TestPath_2-3-14}    Administrator    LDAP Authentication    Storage Fax RX Data
+@{OptionValue_2-3-14}    On
+@{OptionIndex_2-3-14}    0
+${TestCase}    2-3-15
+@{TestPath_2-3-15}    Administrator    LDAP Authentication    Remember User ID
+@{OptionValue_2-3-15}    On
+@{OptionIndex_2-3-15}    0
+${TestCase}    2-3-16
+@{TestPath_2-3-16}    Administrator    LDAP Authentication    LDAP Server Settings    LDAP Server Address
+@{OptionValue_2-3-16}    10.244.8.8
+@{OptionIndex_2-3-16}    0
+${TestCase}    2-3-17
+@{TestPath_2-3-17}    Administrator    LDAP Authentication    LDAP Server Settings    Get Mail Address
+@{OptionValue_2-3-17}    Off
+@{OptionIndex_2-3-17}    0
+${TestCase}    2-3-18
+@{TestPath_2-3-18}    Administrator    LDAP Authentication    LDAP Server Settings    Get User's Home Directory
+@{OptionValue_2-3-18}    Off
+@{OptionIndex_2-3-18}    0
+${TestCase}    2-3-19
+@{TestPath_2-3-19}    Administrator    LDAP Authentication    LDAP Server Settings    LDAP Server Port
+@{OptionValue_2-3-19}    888
+@{OptionIndex_2-3-19}    0
+${TestCase}    2-3-20
+@{TestPath_2-3-20}    Administrator    LDAP Authentication    LDAP Server Settings    LDAP Search Root
+@{OptionValue_2-3-20}    CN=$firstName
+@{OptionIndex_2-3-20}    0
+${TestCase}    2-3-21
+@{TestPath_2-3-21}    Administrator    LDAP Authentication    LDAP Server Settings    Attribute of Name (Search Key)
+@{OptionValue_2-3-21}    name
+@{OptionIndex_2-3-21}    1
+${TestCase}    UserRestrictionFunctionOff
+@{TestPath_Condition3}    Administrator    User Restriction Function
+@{OptionValue_Condition3}    Off
+@{OptionIndex_Condition3}    0
+${TestCase}    2-3-22
+@{TestPath_2-3-22}    Administrator    Restriction Management    Setting Lock
+@{OptionValue_2-3-22}    On
+@{OptionIndex_2-3-22}    0
+${TestCase}    2-3-24
+@{TestPath_2-3-24}    Administrator    Restriction Management    Setting Lock Detail    General Setup
+@{OptionValue_2-3-24}    Enabled
+@{OptionIndex_2-3-24}    0
+${TestCase}    2-3-25
+@{TestPath_2-3-25}    Administrator    Restriction Management    Setting Lock Detail    Shortcut Settings
+@{OptionValue_2-3-25}    Enabled
+@{OptionIndex_2-3-25}    0
+${TestCase}    2-3-26
+@{TestPath_2-3-26}    Administrator    Restriction Management    Setting Lock Detail    Fax
+@{OptionValue_2-3-26}    Enabled
+@{OptionIndex_2-3-26}    0
+${TestCase}    2-3-27
+@{TestPath_2-3-27}    Administrator    Restriction Management    Setting Lock Detail    Printer
+@{OptionValue_2-3-27}    Enabled
+@{OptionIndex_2-3-27}    0
+${TestCase}    2-3-28
+@{TestPath_2-3-28}    Administrator    Restriction Management    Setting Lock Detail    Network
+@{OptionValue_2-3-28}    Enabled
+@{OptionIndex_2-3-28}    0
+${TestCase}    2-3-29
+@{TestPath_2-3-29}    Administrator    Restriction Management    Setting Lock Detail    Print Reports
+@{OptionValue_2-3-29}    Enabled
+@{OptionIndex_2-3-29}    0
+${TestCase}    2-3-30
+@{TestPath_2-3-30}    Administrator    Restriction Management    Setting Lock Detail    Machine Info.
+@{OptionValue_2-3-30}    Enabled
+@{OptionIndex_2-3-30}    0
+${TestCase}    2-3-31
+@{TestPath_2-3-31}    Administrator    Restriction Management    Setting Lock Detail    Initial Setup
+@{OptionValue_2-3-31}    Enabled
+@{OptionIndex_2-3-31}    0
+${TestCase}    2-3-32
+@{TestPath_2-3-32}    Administrator    Restriction Management    Setting Lock Detail    Service
+@{OptionValue_2-3-32}    Enabled
+@{OptionIndex_2-3-32}    0
+${TestCase}    2-3-33
+@{TestPath_2-3-33}    Administrator    Restriction Management    Setting Lock Detail    Address Book
+@{OptionValue_2-3-33}    Enabled
+@{OptionIndex_2-3-33}    0
+${TestCase}    2-3-34
+@{TestPath_2-3-34}    Administrator    Solutions    Solutions
+@{OptionValue_2-3-34}    Off
+@{OptionIndex_2-3-34}    0
+${TestCase}    2-3-35
+@{TestPath_2-3-35}    Administrator    Solutions    Solutions Button Title    1st Line
+@{OptionValue_2-3-35}    TestLine1
+@{OptionIndex_2-3-35}    0
+${TestCase}    2-3-36
+@{TestPath_2-3-36}    Administrator    Solutions    Solutions Button Title    2nd Line
+@{OptionValue_2-3-36}    TestLine2
+@{OptionIndex_2-3-36}    0
+${TestCase}    2-3-37
+@{TestPath_2-3-37}    Administrator    Solutions    Login Portal
+@{OptionValue_2-3-37}    Off
+@{OptionIndex_2-3-37}    0
+${TestCase}    2-3-38
+@{TestPath_2-3-38}    Administrator    Solutions    Login Portal Message
+@{OptionValue_2-3-38}    TestMsg
+@{OptionIndex_2-3-38}    0
+${TestCase}    2-3-39
+@{TestPath_2-3-39}    Administrator    Solutions    Auto print faxes when locked
+@{OptionValue_2-3-39}    Off
+@{OptionIndex_2-3-39}    0
+${TestCase}    2-3-40
+@{TestPath_2-3-40}    Administrator    Solutions    Screen displayed after Login
+@{OptionValue_2-3-40}    Home Screen
+@{OptionIndex_2-3-40}    0
+${TestCase}    2-3-41
+@{TestPath_2-3-41}    Administrator    Solutions    Remote Launch
+@{OptionValue_2-3-41}    Off
+@{OptionIndex_2-3-41}    0
+${TestCase}    2-3-42
+@{TestPath_2-3-42}    Administrator    Solutions    USB card reader support
+@{OptionValue_2-3-42}    Off
+@{OptionIndex_2-3-42}    0
+${TestCase}    2-3-43
+@{TestPath_2-3-43}    Administrator    Solutions    Internal NFC reader
+@{OptionValue_2-3-43}    Off
+@{OptionIndex_2-3-43}    0
+${TestCase}    2-3-44
+@{TestPath_2-3-44}    Administrator    Solutions    NFC Reader    Supported Types
+@{OptionValue_2-3-44}    ICODE
+@{OptionIndex_2-3-44}    0
+${TestCase}    2-3-45
+@{TestPath_2-3-45}    Administrator    Solutions    NFC Data Format    Notation
+@{OptionValue_2-3-45}    Decimal
+@{OptionIndex_2-3-45}    0
+${TestCase}    2-3-46
+@{TestPath_2-3-46}    Administrator    Solutions    NFC Data Format    Byte Order
+@{OptionValue_2-3-46}    Normal
+@{OptionIndex_2-3-46}    0
+${TestCase}    2-3-47
+@{TestPath_2-3-47}    Administrator    Solutions    NFC Data Format    Limit Data Length
+@{OptionValue_2-3-47}    18
+@{OptionIndex_2-3-47}    0
+${TestCase}    2-3-48
+@{TestPath_2-3-48}    Administrator    Solutions    NFC Data Format    Add Leading Character
+@{OptionValue_2-3-48}    TestLeadChar
+@{OptionIndex_2-3-48}    0
+${TestCase}    2-3-49
+@{TestPath_2-3-49}    Administrator    Solutions    NFC Data Format    Add Trailing Character
+@{OptionValue_2-3-49}    TestTrailChar
+@{OptionIndex_2-3-49}    0
+${TestCase}    2-3-111
+@{TestPath_2-3-111}    Administrator    External Card Reader    Allow alternative card readers
+@{OptionValue_2-3-111}    All Card Readers
+@{OptionIndex_2-3-111}    0
+${TestCase}    2-3-112
+@{TestPath_2-3-112}    Administrator    External Card Reader    Card Reader Registration    Card Reader Name 1
+@{OptionValue_2-3-112}    Test1
+@{OptionIndex_2-3-112}    0
+${TestCase}    2-3-113
+@{TestPath_2-3-113}    Administrator    External Card Reader    Card Reader Registration    Vendor ID(idVendor) 1
+@{OptionValue_2-3-113}    0C27
+@{OptionIndex_2-3-113}    0
+${TestCase}    2-3-114
+@{TestPath_2-3-114}    Administrator    External Card Reader    Card Reader Registration    Product ID(idProduct) 1
+@{OptionValue_2-3-114}    3BFA
+@{OptionIndex_2-3-114}    0
+${TestCase}    2-3-115
+@{TestPath_2-3-115}    Administrator    External Card Reader    Card Reader Registration    Card Reader Name 2
+@{OptionValue_2-3-115}    Test2
+@{OptionIndex_2-3-115}    0
+${TestCase}    2-3-116
+@{TestPath_2-3-116}    Administrator    External Card Reader    Card Reader Registration    Vendor ID(idVendor) 2
+@{OptionValue_2-3-116}    09D8
+@{OptionIndex_2-3-116}    0
+${TestCase}    2-3-117
+@{TestPath_2-3-117}    Administrator    External Card Reader    Card Reader Registration    Product ID(idProduct) 2
+@{OptionValue_2-3-117}    0310
+@{OptionIndex_2-3-117}    0
+${TestCase}    2-3-118
+@{TestPath_2-3-118}    Administrator    External Card Reader    Card Reader Registration    Card Reader Name 3
+@{OptionValue_2-3-118}    Test3
+@{OptionIndex_2-3-118}    0
+${TestCase}    2-3-119
+@{TestPath_2-3-119}    Administrator    External Card Reader    Card Reader Registration    Vendor ID(idVendor) 3
+@{OptionValue_2-3-119}    09D8
+@{OptionIndex_2-3-119}    0
+${TestCase}    2-3-120
+@{TestPath_2-3-120}    Administrator    External Card Reader    Card Reader Registration    Product ID(idProduct) 3
+@{OptionValue_2-3-120}    0410
+@{OptionIndex_2-3-120}    0
+${TestCase}    2-3-121
+@{TestPath_2-3-121}    Administrator    External Card Reader    Card Reader Registration    Card Reader Name 4
+@{OptionValue_2-3-121}    Test4
+@{OptionIndex_2-3-121}    0
+${TestCase}    2-3-122
+@{TestPath_2-3-122}    Administrator    External Card Reader    Card Reader Registration    Vendor ID(idVendor) 4
+@{OptionValue_2-3-122}    0040
+@{OptionIndex_2-3-122}    0
+${TestCase}    2-3-123
+@{TestPath_2-3-123}    Administrator    External Card Reader    Card Reader Registration    Product ID(idProduct) 4
+@{OptionValue_2-3-123}    0041
+@{OptionIndex_2-3-123}    0
+${TestCase}    2-3-124
+@{TestPath_2-3-124}    Administrator    External Card Reader    Card Reader Registration    Card Reader Name 5
+@{OptionValue_2-3-124}    Test5
+@{OptionIndex_2-3-124}    0
+${TestCase}    2-3-125
+@{TestPath_2-3-125}    Administrator    External Card Reader    Card Reader Registration    Vendor ID(idVendor) 5
+@{OptionValue_2-3-125}    0050
+@{OptionIndex_2-3-125}    0
+${TestCase}    2-3-126
+@{TestPath_2-3-126}    Administrator    External Card Reader    Card Reader Registration    Product ID(idProduct) 5
+@{OptionValue_2-3-126}    0051
+@{OptionIndex_2-3-126}    0
+${TestCase}    2-3-127
+@{TestPath_2-3-127}    Administrator    Store Print Log to Network    Print Log to Network Settings    Print Log
+@{OptionValue_2-3-127}    On
+@{OptionIndex_2-3-127}    0
+${TestCase}    2-3-128
+@{TestPath_2-3-128}    Administrator    Store Print Log to Network    Print Log to Network Settings    Network Folder Path
+@{OptionValue_2-3-128}    :\\SavePath
+@{OptionIndex_2-3-128}    0
+${TestCase}    2-3-129
+@{TestPath_2-3-129}    Administrator    Store Print Log to Network    Print Log to Network Settings    File Name
+@{OptionValue_2-3-129}    TestName
+@{OptionIndex_2-3-129}    0
+${TestCase}    2-3-130
+@{TestPath_2-3-130}    Administrator    Store Print Log to Network    Print Log to Network Settings    File Type
+@{OptionValue_2-3-130}    CSV
+@{OptionIndex_2-3-130}    0
+${TestCase}    2-3-131
+@{TestPath_2-3-131}    Administrator    Store Print Log to Network    Authentication Setting    Auth. Method
+@{OptionValue_2-3-131}    Kerberos
+@{OptionIndex_2-3-131}    0
+${TestCase}    2-3-132
+@{TestPath_2-3-132}    Administrator    Store Print Log to Network    Authentication Setting    Username
+@{OptionValue_2-3-132}    TestName
+@{OptionIndex_2-3-132}    0
+${TestCase}    2-3-134
+@{TestPath_2-3-134}    Administrator    Store Print Log to Network    Authentication Setting    Kerberos Server Address
+@{OptionValue_2-3-134}    10.244.8.8
+@{OptionIndex_2-3-134}    0
+${TestCase}    2-3-135
+@{TestPath_2-3-135}    Administrator    Store Print Log to Network    Error Detection Setting    Action
+@{OptionValue_2-3-135}    Ignore Log & Print
+@{OptionIndex_2-3-135}    0
+${TestCase}    2-3-142
+@{TestPath_2-3-142}    Administrator    Date&Time    Synchronize with SNTP server
+@{OptionValue_2-3-142}    Off
+@{OptionIndex_2-3-142}    0
+${TestCase}    2-3-137-1
+@{TestPath_2-3-137-1}    Administrator    Date&Time    Date
+@{OptionValue_2-3-137-1}    05
+@{OptionIndex_2-3-137-1}    0
+${TestCase}    2-3-137-2
+@{TestPath_2-3-137-2}    Administrator    Date&Time    Date
+@{OptionValue_2-3-137-2}    06
+@{OptionIndex_2-3-137-2}    1
+${TestCase}    2-3-137-3
+@{TestPath_2-3-137-3}    Administrator    Date&Time    Date
+@{OptionValue_2-3-137-3}    2018
+@{OptionIndex_2-3-137-3}    2
+${TestCase}    2-3-139-1
+@{TestPath_2-3-139-1}    Administrator    Date&Time    Time
+@{OptionValue_2-3-139-1}    08
+@{OptionIndex_2-3-139-1}    0
+${TestCase}    2-3-139-2
+@{TestPath_2-3-139-2}    Administrator    Date&Time    Time
+@{OptionValue_2-3-139-2}    28
+@{OptionIndex_2-3-139-2}    1
+${TestCase}    2-3-140
+@{TestPath_2-3-140}    Administrator    Date&Time    Time Zone
+@{OptionValue_2-3-140}    UTC+06:00
+@{OptionIndex_2-3-140}    0
+${TestCase}    2-3-143
+@{TestPath_2-3-143}    Administrator    Panel Logout Time    Logout
+@{OptionValue_2-3-143}    80
+@{OptionIndex_2-3-143}    0
+${TestCase}    2-3-144
+@{TestPath_2-3-144}    Administrator    Firmware Update    Firmware Update
+@{OptionValue_2-3-144}    Disabled
+@{OptionIndex_2-3-144}    0
+${TestCase}    2-3-145
+@{TestPath_2-3-145}    Administrator    Stored Print Jobs    Auto Delete
+@{OptionValue_2-3-145}    On
+@{OptionIndex_2-3-145}    0
+${TestCase}    2-3-146
+@{TestPath_2-3-146}    Administrator    Stored Print Jobs    Day
+@{OptionValue_2-3-146}    16
+@{OptionIndex_2-3-146}    0
+${TestCase}    2-3-147
+@{TestPath_2-3-147}    Administrator    Stored Print Jobs    Time
+@{OptionValue_2-3-147}    16
+@{OptionIndex_2-3-147}    0
+${TestCase}    4-1-1
+@{TestPath_4-1-1}    Scan    Scan Job e-mail report    Administrator Address
+@{OptionValue_4-1-1}    123
+@{OptionIndex_4-1-1}    0
+${TestCase}    4-1-2
+@{TestPath_4-1-2}    Scan    Scan Job e-mail report    Scan to E-mail Server
+@{OptionValue_4-1-2}    On
+@{OptionIndex_4-1-2}    0
+${TestCase}    4-1-3
+@{TestPath_4-1-3}    Scan    Scan Job e-mail report    Scan to FTP
+@{OptionValue_4-1-3}    On
+@{OptionIndex_4-1-3}    0
+${TestCase}    4-1-4
+@{TestPath_4-1-4}    Scan    Scan Job e-mail report    Scan to SFTP
+@{OptionValue_4-1-4}    On
+@{OptionIndex_4-1-4}    0
+${TestCase}    4-1-5
+@{TestPath_4-1-5}    Scan    Scan Job e-mail report    Scan to Network
+@{OptionValue_4-1-5}    On
+@{OptionIndex_4-1-5}    0
+${TestCase}    4-1-6
+@{TestPath_4-1-6}    Scan    Scan Job e-mail report    Scan to SharePoint
+@{OptionValue_4-1-6}    On
+@{OptionIndex_4-1-6}    0
+${TestCase}    4-1-7
+@{TestPath_4-1-7}    Scan    Scan from PC    Pull Scan
+@{OptionValue_4-1-7}    Disabled
+@{OptionIndex_4-1-7}    0
+${TestCase}    4-2-1
+@{TestPath_4-2-1}    Scan    Scan File Name    File Name Style
+@{OptionValue_4-2-1}    Name_Date
+@{OptionIndex_4-2-1}    0
+${TestCase}    4-2-3
+@{TestPath_4-2-3}    Scan    Scan File Name    Add Date & Time    Date
+@{OptionValue_4-2-3}    dd/MM/yyyy
+@{OptionIndex_4-2-3}    0
+${TestCase}    4-2-4
+@{TestPath_4-2-4}    Scan    Scan File Name    Add Date & Time    Time
+@{OptionValue_4-2-4}    Off
+@{OptionIndex_4-2-4}    0
+${TestCase}    4-3-1
+@{TestPath_4-3-1}    Scan    Scan to Media    File Name
+@{OptionValue_4-3-1}    Order3
+@{OptionIndex_4-3-1}    0
+${TestCase}    4-3-2
+@{TestPath_4-3-2}    Scan    Scan to Media    Quality
+@{OptionValue_4-3-2}    Color 100 dpi
+@{OptionIndex_4-3-2}    0
+${TestCase}    4-3-3
+@{TestPath_4-3-3}    Scan    Scan to Media    File Type
+@{OptionValue_4-3-3}    PDF Single-Page
+@{OptionIndex_4-3-3}    0
+${TestCase}    4-3-4
+@{TestPath_4-3-4}    Scan    Scan to Media    Document Size
+@{OptionValue_4-3-4}    A4
+@{OptionIndex_4-3-4}    0
+${TestCase}    4-3-5
+@{TestPath_4-3-5}    Scan    Scan to Media    File Size
+@{OptionValue_4-3-5}    Large
+@{OptionIndex_4-3-5}    0
+${TestCase}    4-3-6
+@{TestPath_4-3-6}    Scan    Scan to Media    ADF Auto Deskew
+@{OptionValue_4-3-6}    Auto
+@{OptionIndex_4-3-6}    0
+${TestCase}    4-3-7
+@{TestPath_4-3-7}    Scan    Scan to Media    Skip Blank Page
+@{OptionValue_4-3-7}    On
+@{OptionIndex_4-3-7}    0
+${TestCase}    4-3-8
+@{TestPath_4-3-8}    Scan    Scan to Media    Skip Blank Page Sensitivity
+@{OptionValue_4-3-8}    -2
+@{OptionIndex_4-3-8}    0
+${TestCase}    4-3-9
+@{TestPath_4-3-9}    Scan    Scan to Media    2-sided Scan
+@{OptionValue_4-3-9}    Long Edge
+@{OptionIndex_4-3-9}    0
+${TestCase}    4-3-10
+@{TestPath_4-3-10}    Scan    Scan to Media    Brightness
+@{OptionValue_4-3-10}    -50
+@{OptionIndex_4-3-10}    0
+${TestCase}    4-3-11
+@{TestPath_4-3-11}    Scan    Scan to Media    Contrast
+@{OptionValue_4-3-11}    -50
+@{OptionIndex_4-3-11}    0
+${TestCase}    4-3-12
+@{TestPath_4-3-12}    Scan    Scan to Media    Remove Background Color
+@{OptionValue_4-3-12}    Low
+@{OptionIndex_4-3-12}    0
+${TestCase}    4-4-1
+@{TestPath_4-4-1}    Scan    Scan to E-mail Server    File Name
+@{OptionValue_4-4-1}    Order7
+@{OptionIndex_4-4-1}    0
+${TestCase}    4-4-2
+@{TestPath_4-4-2}    Scan    Scan to E-mail Server    Quality
+@{OptionValue_4-4-2}    Color 100 dpi
+@{OptionIndex_4-4-2}    0
+${TestCase}    4-4-3
+@{TestPath_4-4-3}    Scan    Scan to E-mail Server    File Type
+@{OptionValue_4-4-3}    PDF Single-Page
+@{OptionIndex_4-4-3}    0
+${TestCase}    4-4-4
+@{TestPath_4-4-4}    Scan    Scan to E-mail Server    Document Size
+@{OptionValue_4-4-4}    A4
+@{OptionIndex_4-4-4}    0
+${TestCase}    4-4-5
+@{TestPath_4-4-5}    Scan    Scan to E-mail Server    File Size
+@{OptionValue_4-4-5}    Large
+@{OptionIndex_4-4-5}    0
+${TestCase}    4-4-6
+@{TestPath_4-4-6}    Scan    Scan to E-mail Server    ADF Auto Deskew
+@{OptionValue_4-4-6}    Auto
+@{OptionIndex_4-4-6}    0
+${TestCase}    4-4-7
+@{TestPath_4-4-7}    Scan    Scan to E-mail Server    Skip Blank Page
+@{OptionValue_4-4-7}    On
+@{OptionIndex_4-4-7}    0
+${TestCase}    4-4-8
+@{TestPath_4-4-8}    Scan    Scan to E-mail Server    Skip Blank Page Sensitivity
+@{OptionValue_4-4-8}    -2
+@{OptionIndex_4-4-8}    0
+${TestCase}    4-4-9
+@{TestPath_4-4-9}    Scan    Scan to E-mail Server    2\-sided Scan
+@{OptionValue_4-4-9}    Long Edge
+@{OptionIndex_4-4-9}    0
+${TestCase}    4-4-10
+@{TestPath_4-4-10}    Scan    Scan to E-mail Server    Brightness
+@{OptionValue_4-4-10}    -50
+@{OptionIndex_4-4-10}    0
+${TestCase}    4-4-11
+@{TestPath_4-4-11}    Scan    Scan to E-mail Server    Contrast
+@{OptionValue_4-4-11}    -50
+@{OptionIndex_4-4-11}    0
+${TestCase}    4-4-12
+@{TestPath_4-4-12}    Scan    Scan to E-mail Server    Remove Background Color
+@{OptionValue_4-4-12}    Low
+@{OptionIndex_4-4-12}    0
+${TestCase}    4-4-13
+@{TestPath_4-4-13}    Scan    Scan to E-mail Server    Scan Long Paper (ADF)
+@{OptionValue_4-4-13}    On
+@{OptionIndex_4-4-13}    0
+${TestCase}    4-5-1
+@{TestPath_4-5-1}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 1
+@{OptionValue_4-5-1}    FTP
+@{OptionIndex_4-5-1}    0
+${TestCase}    4-5-2
+@{TestPath_4-5-2}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 2
+@{OptionValue_4-5-2}    SFTP
+@{OptionIndex_4-5-2}    0
+${TestCase}    4-5-3
+@{TestPath_4-5-3}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 3
+@{OptionValue_4-5-3}    Network
+@{OptionIndex_4-5-3}    0
+${TestCase}    4-5-4
+@{TestPath_4-5-4}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 4
+@{OptionValue_4-5-4}    SharePoint
+@{OptionIndex_4-5-4}    0
+${TestCase}    4-5-5
+@{TestPath_4-5-5}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 5
+@{OptionValue_4-5-5}    HTTP(S)
+@{OptionIndex_4-5-5}    0
+${TestCase}    4-5-6
+@{TestPath_4-5-6}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 6
+@{OptionValue_4-5-6}    FTP
+@{OptionIndex_4-5-6}    0
+${TestCase}    4-5-7
+@{TestPath_4-5-7}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 7
+@{OptionValue_4-5-7}    SFTP
+@{OptionIndex_4-5-7}    0
+${TestCase}    4-5-8
+@{TestPath_4-5-8}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 8
+@{OptionValue_4-5-8}    Network
+@{OptionIndex_4-5-8}    0
+${TestCase}    4-5-9
+@{TestPath_4-5-9}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 9
+@{OptionValue_4-5-9}    SharePoint
+@{OptionIndex_4-5-9}    0
+${TestCase}    4-5-10
+@{TestPath_4-5-10}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 10
+@{OptionValue_4-5-10}    HTTP(S)
+@{OptionIndex_4-5-10}    0
+${TestCase}    4-5-11
+@{TestPath_4-5-11}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 11
+@{OptionValue_4-5-11}    FTP
+@{OptionIndex_4-5-11}    0
+${TestCase}    4-5-12
+@{TestPath_4-5-12}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 12
+@{OptionValue_4-5-12}    SFTP
+@{OptionIndex_4-5-12}    0
+${TestCase}    4-5-13
+@{TestPath_4-5-13}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 13
+@{OptionValue_4-5-13}    Network
+@{OptionIndex_4-5-13}    0
+${TestCase}    4-5-14
+@{TestPath_4-5-14}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 14
+@{OptionValue_4-5-14}    SharePoint
+@{OptionIndex_4-5-14}    0
+${TestCase}    4-5-15
+@{TestPath_4-5-15}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 15
+@{OptionValue_4-5-15}    HTTP(S)
+@{OptionIndex_4-5-15}    0
+${TestCase}    4-5-16
+@{TestPath_4-5-16}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 16
+@{OptionValue_4-5-16}    FTP
+@{OptionIndex_4-5-16}    0
+${TestCase}    4-5-17
+@{TestPath_4-5-17}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 17
+@{OptionValue_4-5-17}    SFTP
+@{OptionIndex_4-5-17}    0
+${TestCase}    4-5-18
+@{TestPath_4-5-18}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 18
+@{OptionValue_4-5-18}    Network
+@{OptionIndex_4-5-18}    0
+${TestCase}    4-5-19
+@{TestPath_4-5-19}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 19
+@{OptionValue_4-5-19}    SharePoint
+@{OptionIndex_4-5-19}    0
+${TestCase}    4-5-20
+@{TestPath_4-5-20}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 20
+@{OptionValue_4-5-20}    HTTP(S)
+@{OptionIndex_4-5-20}    0
+${TestCase}    4-5-21
+@{TestPath_4-5-21}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 21
+@{OptionValue_4-5-21}    FTP
+@{OptionIndex_4-5-21}    0
+${TestCase}    4-5-22
+@{TestPath_4-5-22}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 22
+@{OptionValue_4-5-22}    SFTP
+@{OptionIndex_4-5-22}    0
+${TestCase}    4-5-23
+@{TestPath_4-5-23}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 23
+@{OptionValue_4-5-23}    Network
+@{OptionIndex_4-5-23}    0
+${TestCase}    4-5-24
+@{TestPath_4-5-24}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 24
+@{OptionValue_4-5-24}    SharePoint
+@{OptionIndex_4-5-24}    0
+${TestCase}    4-5-25
+@{TestPath_4-5-25}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Profile 25
+@{OptionValue_4-5-25}    HTTP(S)
+@{OptionIndex_4-5-25}    0
+${TestCase}    4-5-26
+@{TestPath_4-5-26}    Scan    Scan to FTP/SFTP/Network/SharePoint/HTTP(S)    Send to My Folder
+@{OptionValue_4-5-26}    On
+@{OptionIndex_4-5-26}    0
