@@ -1,0 +1,70 @@
+*** Variables ***
+@{PagePath}     Administrator	Solutions    Solutions\ Application\ Entry
+${TableID1}  Login
+@{PathName1}    Application\ ID   URL    Argument
+@{PathValue1}    LoginApp    LoginURL    Loginwww
+@{PathIndex1}   0   0   0
+${TableID2}  Logout
+@{PathName2}    Application\ ID   URL    Argument
+@{PathValue2}    LogoutApp    LogoutURL    Logoutwww
+@{PathIndex2}   0   0   0
+${TableID3}  Menu1
+@{PathName3}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue3}    Menu1App    Menu1Display    Menu1URL    Menu1www
+@{PathIndex3}   0   0   0   0
+${TableID4}  Menu2
+@{PathName4}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue4}    Menu2App    Menu2Display    Menu2URL    Menu2www
+@{PathIndex4}   0   0   0   0
+${TableID5}  Menu3
+@{PathName5}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue5}    Menu3App    Menu3Display    Menu3URL    Menu3www
+@{PathIndex5}   0   0   0   0
+${TableID6}  Menu4
+@{PathName6}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue6}    Menu4App    Menu5Display    Menu4URL    Menu4www
+@{PathIndex6}   0   0   0   0
+${TableID7}  Menu5
+@{PathName7}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue7}    Menu5App    Menu5Display    Menu5URL    Menu5www
+@{PathIndex7}   0   0   0   0
+${TableID8}  Menu6
+@{PathName8}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue8}    Menu6App    Menu6Display    Menu6URL    Menu6www
+@{PathIndex8}   0   0   0   0
+${TableID9}  Menu7
+@{PathName9}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue9}    Menu7App    Menu7Display    Menu7URL    Menu6www
+@{PathIndex9}   0   0   0   0
+${TableID10}  Menu8
+@{PathName10}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue10}    Menu8App    Menu8Display    Menu8URL    Menu8www
+@{PathIndex10}   0   0   0   0
+${TableID11}  Menu9
+@{PathName11}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue11}    Menu9App    Menu9Display    Menu9URL    Menu9www
+@{PathIndex11}   0   0   0   0
+${TableID12}  Menu10
+@{PathName12}    Application\ ID    Display\ Name    URL    Argument
+@{PathValue12}    Menu10App    Menu10Display    Menu10URL    Menu10www
+@{PathIndex12}   0   0   0   0
+${TableID13}  Option1
+@{PathName13}    Application\ ID   URL    Argument
+@{PathValue13}    Option1App    Option1URL    Option1www
+@{PathIndex13}   0   0   0
+${TableID14}  Option2
+@{PathName14}    Application\ ID   URL    Argument
+@{PathValue14}    Option2App    Option2URL    Option2www
+@{PathIndex14}   0   0   0
+${TableID15}  Option3
+@{PathName15}    Application\ ID   URL    Argument
+@{PathValue15}    Option3App    Option3URL    Option3www
+@{PathIndex15}   0   0   0
+${TableID16}  Option4
+@{PathName16}    Application\ ID   URL    Argument
+@{PathValue16}    Option4App    Option4URL    Option4www
+@{PathIndex16}   0   0   0
+${TableID17}  Option5
+@{PathName17}    Application\ ID   URL    Argument
+@{PathValue17}    Option5App    Option5URL    Option5www
+@{PathIndex17}   0   0   0
