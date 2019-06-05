@@ -1,3 +1,9 @@
+:begin
+python deletebin.py
+TIMEOUT /T 100
+goto begin
+
+
 pybot --outputdir .\Report\ -T ^
 TC_Base\PrepareMachineA.robot ^
 TC_Set\SetOption.robot ^
