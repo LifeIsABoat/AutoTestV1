@@ -1,0 +1,19 @@
+*** Variables ***
+@{SecureFunctionLockPath}     Administrator    User Restriction Function
+@{SecureFunctionLockValue}    Secure Function Lock
+@{SecureFunctionLockIndex}		0
+@{FunctionsPath1}   Administrator    Secure\ Function\ Lock    Restricted Functions\ 1\-25
+@{FunctionsPath2}   Administrator    Secure\ Function\ Lock    Restricted Functions\ 76\-100
+@{FunctionsPath3}   Administrator    Secure\ Function\ Lock    Restricted Functions\ 26\-50
+@{FunctionsPath4}   Administrator    Secure\ Function\ Lock    User\ List\ 1\-25
+@{FunctionsPath5}   Administrator    Secure\ Function\ Lock    User\ List\ 26\-50
+@{FunctionsPath6}   Administrator    Secure\ Function\ Lock    User\ List\ 76\-100
+
+@{FrequencyPath}     Administrator		Secure Function Lock		Counter Auto Reset		Frequency
+@{FrequencyValue}     Every week on a
+@{TimePath}     Administrator		Secure Function Lock		Counter Auto Reset		Time
+@{TimeValue1}     10
+@{TimeValue2}     11
+@{Row1}    1    LIST1    1234    mail1234      121      01 USER1
+@{Row2}    1    LIST26    1234    mail123426      1226      26 USER26
+@{Row3}    25    LIST100    1234    mail1234200      12100      100 USER100
