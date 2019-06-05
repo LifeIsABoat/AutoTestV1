@@ -1,0 +1,49 @@
+*** Variables ***
+@{ScanToUSBPath}	Scan	Scan\ File\ Name	Scan\ to\ Media
+@{OptionValue_4-2-8}		Order2
+@{OptionValue_4-2-9}		Order3
+@{OptionValue_4-2-10}		Order4
+@{OptionValue_4-2-11}		Order5
+
+@{ScanToE-mailServerPath}	Scan	Scan\ File\ Name	Scan\ to\ E-mail\ Server
+@{OptionValue_4-2-12}		Order2
+@{OptionValue_4-2-13}		Order3
+@{OptionValue_4-2-14}		Order4
+@{OptionValue_4-2-15}		Order5
+@{OptionValue_4-2-16}		Order6
+@{OptionValue_4-2-17} 		Order7
+@{OptionValue_4-2-18}		Order8
+@{OptionValue_4-2-19}		Order9
+@{OptionValue_4-2-20}		Order10
+
+@{ScanToFTP/SFTPPath}	Scan	Scan\ File\ Name	Scan\ to\ FTP/SFTP
+@{OptionValue_4-2-21}		Order2
+@{OptionValue_4-2-22}		Order3
+@{OptionValue_4-2-23}		Order4
+@{OptionValue_4-2-24} 		Order5
+@{OptionValue_4-2-25}		Order6
+@{OptionValue_4-2-26}		Order7
+@{OptionValue_4-2-27}		Order8
+@{OptionValue_4-2-28}		Order9
+@{OptionValue_4-2-29}		Order10
+@{OptionValue_4-2-30}		Order11
+@{OptionValue_4-2-31}		Order12
+@{OptionValue_4-2-32}		Order13
+@{OptionValue_4-2-33}		Order14
+@{OptionValue_4-2-34}		Order15
+
+@{ScanToNetwork/SharePointPath}		Scan	Scan\ File\ Name	Scan\ to\ Network/SharePoint
+@{OptionValue_4-2-35}		Order2
+@{OptionValue_4-2-36}		Order3
+@{OptionValue_4-2-37}		Order4
+@{OptionValue_4-2-38}		Order5
+@{OptionValue_4-2-39} 		Order6
+@{OptionValue_4-2-40}		Order7
+@{OptionValue_4-2-41}		Order8
+@{OptionValue_4-2-42}		Order9
+@{OptionValue_4-2-43}		Order10
+@{OptionValue_4-2-44}		Order11
+@{OptionValue_4-2-45}		Order12
+@{OptionValue_4-2-46}		Order13
+@{OptionValue_4-2-47}		Order14
+@{OptionValue_4-2-48}		Order15
