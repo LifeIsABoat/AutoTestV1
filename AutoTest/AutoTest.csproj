@@ -1,80 +1,549 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8B6BBDD4-DFB9-4658-BC65-E2F9E8881DF7}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>AutoTest</RootNamespace>
-    <AssemblyName>AutoTest</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <ProjectGuid>{3C897231-ED68-46D2-B173-F5939B78A463}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FTBAutoTestTool</RootNamespace>
+    <AssemblyName>FTBAutoTestTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\OutPut\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\OutPut\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.5.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.5.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Command\AbstractRepeatPanelExecutorMFCTP.cs" />
+    <Compile Include="Command\Implementation\RepeatPanelExecutorByIO.cs" />
+    <Compile Include="Engine\GetCountryCode\GetCountryCode.cs" />
+    <Compile Include="Machine\MFCModelTP\Implementation\Component\ComponentIOSocket.cs" />
+    <Compile Include="Machine\ScreenSocket.cs" />
+    <Compile Include="BLL\CaptureScreen\CaptureScreen.cs" />
+    <Compile Include="BLL\Check\AbstractChecker.cs" />
+    <Compile Include="BLL\Check\ftbStringChecker.cs" />
+    <Compile Include="BLL\Check\ftbTitleChecker.cs" />
+    <Compile Include="BLL\Check\InputToOptionChecker.cs" />
+    <Compile Include="BLL\Check\Option\EwsToMachineOptionChecker.cs" />
+    <Compile Include="BLL\Check\Option\EwsDefaultCheckWithFTB.cs" />
+    <Compile Include="BLL\Check\Option\RspDefaultCheckWithFTB.cs" />
+    <Compile Include="BLL\Check\Option\OptionDefaultChecker.cs" />
+    <Compile Include="BLL\Check\Option\OptionSettingChecker.cs" />
+    <Compile Include="BLL\Check\Option\OptionSettingFromHomeChecker.cs" />
+    <Compile Include="BLL\Check\Option\MachineToEwsOptionChecker.cs" />
+    <Compile Include="BLL\Check\Option\MachineToRspOptionChecker.cs" />
+    <Compile Include="BLL\Check\Option\RspToMachineOptionChecker.cs" />
+    <Compile Include="BLL\Check\Screen\FtbScreenItemListChecker.cs" />
+    <Compile Include="BLL\Check\Screen\FtbScreenTitleChecker.cs" />
+    <Compile Include="BLL\Check\Screen\ScreenMoveToChecker.cs" />
+    <Compile Include="BLL\Check\Screen\ScreenCheck.cs" />
+    <Compile Include="BLL\ModelInfo.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ByLog\ControlOptionIconFixerByLog.cs" />
+    <Compile Include="BLL\Screen\Control\AbstractControlArrow.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\AbstractScreenAggregate.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenCircularDoublyLinkedList\ScreenCircularDoublyLinkedList.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenCircularDoublyLinkedList\ScreenCircularDoublyLinkedListReadIterator.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenCircularDoublyLinkedList\ScreenCircularDoublyLinkedListShowIterator.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenDictionary\ScreenDictionary.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenDictionary\ScreenDictionaryReadIterator.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenDictionary\ScreenDictionaryShowIterator.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenDoublyLinkedList\ScreenDoublyLinkedList.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenDoublyLinkedList\ScreenDoublyLinkedListReadIterator.cs" />
+    <Compile Include="BLL\Screen\ScreenAggregate\ScreenDoublyLinkedList\ScreenDoublyLinkedListShowIterator.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\AbstractControlFixer.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ByLog\AbstractControlFixerByLog.cs" />
+    <Compile Include="BLL\SpecialOperatorForLog\LogScreenChangeChecker.cs" />
+    <Compile Include="BLL\SpecialOperatorForLog\LogParserMFCTP.cs" />
+    <Compile Include="BLL\SpecialOperatorForLog\LogReaderMFCTPByIO.cs" />
+    <Compile Include="BLL\SpecialOperatorForLog\LogScreenTranfer.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ByLog\ControlArrowFixerByLog.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ByLog\ControlButtonFixerByLog.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ControlFixerCondition.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ByNormalLogic\ControlInputFixer.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ByNormalLogic\ControlLableFixer.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ByLog\ControlTagFixerByLog.cs" />
+    <Compile Include="BLL\Screen\ControlFixer\ByNormalLogic\ControlTitleFixer.cs" />
+    <Compile Include="BLL\Screen\Control\ControlArrowUpDown.cs" />
+    <Compile Include="BLL\Screen\Control\IAggregateCreateAPI.cs" />
+    <Compile Include="BLL\TcSort.cs" />
+    <Compile Include="BLL\TcTest\AbstractTcManager.cs" />
+    <Compile Include="BLL\TcTest\CommonTemp\TempTcSort.cs.cs" />
+    <Compile Include="BLL\TcTest\CommonTemp\TempTestLimitRangeHandler.cs" />
+    <Compile Include="BLL\TcTest\Common\OptionLevelClickHandler.cs" />
+    <Compile Include="BLL\TcTest\Common\TotalScreenCmnTestRunHandler.cs" />
+    <Compile Include="BLL\TcTest\InputScreenSoftkeyTest\InputToOption.cs" />
+    <Compile Include="BLL\TcTest\InputScreenSoftkeyTest\TcManagerSoftkeyScreen.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestMachineToExternal\MachineSetCheck.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionDefault\RspAndEws\EwsDefault.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionDefault\RspAndEws\RspDefault.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionDefault\RspAndEws\TcManagerRspAndEwsOptionDefault.cs" />
+    <Compile Include="BLL\TcTest\TotalOpinionBlackList.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestEwsToMachineSetting\EwsToMachineOptionSettings.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestEwsToMachineSetting\TcManagerEwsToMachineOptionSetting.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestFtbString\Menu\TcManagerFtbString.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestFtbString\Temp\TempTcManagerFtbString.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestFtbSreen\ScreenTransfer.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestFtbSreen\TcManagerScreenCheck.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestFtbSreen\ToScreenByCondition.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestFtbSreen\ToScreenByPath.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionDefault\Temp\TempTcManagerOptionDefault.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionsetting\Menu\HomeToOption.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionDefault\Menu\TcManagerOptionDefault.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionsetting\Menu\TcManagerOptionSetting.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionsetting\ToOption.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestMachineToExternal\MachineToEws.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestMachineToExternal\MachineToRsp.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestMachineToExternal\TcManagerMachineToExternal.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestRspToMachineSetting\RspToMachineOptionSettings.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestRspToMachineSetting\TcManagerRspToMachineOptionSetting.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestRunMoveTo\TcManagerMoveTo.cs" />
+    <Compile Include="BLL\TcTest\CommonTemp\TempGoTempRoot.cs" />
+    <Compile Include="BLL\TcTest\CommonTemp\TempLevelTransfer.cs" />
+    <Compile Include="BLL\TcTest\OpinionTestOptionsetting\Temp\TempTcManagerOptionSetting.cs" />
+    <Compile Include="BLL\TcTest\TotalManageRun.cs" />
+    <Compile Include="BLL\TcTest\TotalOpinionInfo.cs" />
+    <Compile Include="BLL\TcTest\TotalRuntimeInfo.cs" />
+    <Compile Include="Command\AbstractClickInputButtonExecutorMFCTP.cs" />
+    <Compile Include="DAL\IFTBCommonAggregate.cs" />
+    <Compile Include="DAL\IFTBCommonAggregateImport.cs" />
+    <Compile Include="DAL\IFTBCommonAPI.cs" />
+    <Compile Include="DAL\Implementation\Common\FTBButtonInfo.cs" />
+    <Compile Include="DAL\Implementation\Common\FTBContidion.cs" />
+    <Compile Include="DAL\Implementation\Common\FTBLableInfo.cs" />
+    <Compile Include="DAL\Implementation\Common\FTBLanguage.cs" />
+    <Compile Include="DAL\Implementation\Common\FTBMcc.cs" />
+    <Compile Include="DAL\Implementation\Common\FTBOptionInfo.cs" />
+    <Compile Include="DAL\Implementation\TreeMemoryFTBCommonAggregate.cs" />
+    <Compile Include="DAL\Implementation\TreeMemoryFTBCommonImporterFormJson.cs" />
+    <Compile Include="DAL\Implementation\TreeMemoryFTBCommonLevelIterator.cs" />
+    <Compile Include="DAL\Implementation\TreeMemoryFTBCommonSelectedTcIterator.cs" />
+    <Compile Include="DAL\Implementation\TreeMemoryFTBCommonTcIterator.cs" />
+    <Compile Include="DAL\Implementation\TreeMemory\AbstractScreenComponent.cs" />
+    <Compile Include="DAL\Implementation\TreeMemory\ButtonComposite.cs" />
+    <Compile Include="DAL\Implementation\TreeMemory\ButtonWordFix.cs" />
+    <Compile Include="DAL\Implementation\TreeMemory\OptionLeaf.cs" />
+    <Compile Include="DAL\IScreenCommonAggregate.cs" />
+    <Compile Include="DAL\IScreenCommonAPI.cs" />
+    <Compile Include="DAL\StandardScreen\ScreenMemoryCommonAggregate.cs" />
+    <Compile Include="DAL\StandardScreen\TreeMemoryFTBCommonScreenIterator.cs" />
+    <Compile Include="Command\Implementation\ClickButtonWordExecutorByRawScreen.cs" />
+    <Compile Include="Command\Implementation\ClickInputButtonExecutorByFixInputBtn.cs" />
+    <Compile Include="Parser\TxtParser.cs" />
+    <Compile Include="Report\FlowGraph.cs" />
+    <Compile Include="Service References\EWSService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Test\BLL\CreateTcLibTest.cs" />
+    <Compile Include="Test\BLL\TestTcRun.cs" />
+    <Compile Include="Command\AbstractMoveToScreenExecutorMFCTPByIdentifyList.cs" />
+    <Compile Include="Command\Implementation\MoveToScreenExecutorMFCTPByIdentifyList.cs" />
+    <Compile Include="BLL\TcTest\Common\AbstractCmnTestHandler.cs" />
+    <Compile Include="BLL\TcTest\Common\OneLevelCmnTestNextLevelTransfer.cs" />
+    <Compile Include="BLL\TcTest\Common\OneLevelCmnTestScreenLoder.cs" />
+    <Compile Include="BLL\TcTest\Common\OneLevelCmnTestTargetButtonLoder.cs" />
+    <Compile Include="BLL\TcTest\Common\OneTCCmnTestGoHome.cs" />
+    <Compile Include="BLL\TcTest\Common\OneTCCmnTestLevelTransfer.cs" />
+    <Compile Include="BLL\TcTest\Common\OneTCCmnTestOptionSelect.cs" />
+    <Compile Include="BLL\TcTest\Common\TotalTCCmnTestOpinionChecker.cs" />
+    <Compile Include="BLL\TcTest\Common\TotalTCCmnTestLimitRangeHandler.cs" />
+    <Compile Include="BLL\TcTest\Common\TotalTCCmnTestRunHandler.cs" />
+    <Compile Include="BLL\TcTest\TotalTCWriteReportHandler.cs" />
+    <Compile Include="Command\AbstractClickButtonIdExecutorMFCTP.cs" />
+    <Compile Include="Command\Implementation\ClickButtonIdExecutorByFixAllFirst.cs" />
+    <Compile Include="Command\Implementation\ListFixedScreenExecutorMFCTPByLogAndOCR.cs" />
+    <Compile Include="Command\Implementation\ListRawScreenExecutorMFCTPByLogAndOCR.cs" />
+    <Compile Include="Engine\Communicator\AbstractEngineCommunicator.cs" />
+    <Compile Include="Engine\Communicator\EngineCommunicatorByShareMemory.cs" />
+    <Compile Include="Engine\EngineCommand.cs" />
+    <Compile Include="Engine\EngineEntity\EngineCamera.cs" />
+    <Compile Include="Engine\EngineEntity\EngineDocument.cs" />
+    <Compile Include="Engine\EngineEntity\EngineOCR.cs" />
+    <Compile Include="Engine\OptionOperator\IOptionOperateAPI.cs" />
+    <Compile Include="Engine\OptionOperator\OptioinOperatorByEWS.cs" />
+    <Compile Include="Engine\OptionOperator\OptionOperatorByRSP.cs" />
+    <Compile Include="Parser\HTMLParser.cs" />
+    <Compile Include="Parser\ImageParser.cs" />
+    <Compile Include="Report\CreateReportExcleNpoi.cs" />
+    <Compile Include="Service References\RSPService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StaticCurrentScreen.cs" />
+    <Compile Include="StaticEnvironInfo.cs" />
+    <Compile Include="Command\AbstractClickButtonWordExecutorMFCTP.cs" />
+    <Compile Include="Command\Implementation\ClickButtonWordExecutorByFixAllFirst.cs" />
+    <Compile Include="Command\Implementation\MoveToTragetScreenExecutorMFCTPByFixAllFirst.cs" />
+    <Compile Include="Parser\INIParser.cs" />
+    <Compile Include="Command\AbstractListFixedScreenExecutorMFCTP.cs" />
+    <Compile Include="Command\AbstractMoveToHomeScreenExecutorMFCTP.cs" />
+    <Compile Include="Command\AbstractCommandExecutor.cs" />
+    <Compile Include="BLL\LogScreen\LogControl.cs" />
+    <Compile Include="BLL\LogScreen\LogScreen.cs" />
+    <Compile Include="BLL\Screen\Control\AbstractControl.cs" />
+    <Compile Include="BLL\Screen\Control\ControlButtonIdentify.cs" />
+    <Compile Include="BLL\Screen\Control\ControlButton.cs" />
+    <Compile Include="BLL\Screen\Control\ControlArrowLeftRight.cs" />
+    <Compile Include="BLL\Screen\Control\ControlInput.cs" />
+    <Compile Include="BLL\Screen\Control\ControlLabel.cs" />
+    <Compile Include="BLL\Screen\Control\ControlTitle.cs" />
+    <Compile Include="BLL\Screen\ScreenIdentify.cs" />
+    <Compile Include="BLL\Screen\Control\ControlTag.cs" />
+    <Compile Include="BLL\Screen\Element\AbstractElement.cs" />
+    <Compile Include="BLL\Screen\Element\ElementImage.cs" />
+    <Compile Include="BLL\Screen\Element\ElementString.cs" />
+    <Compile Include="Command\AbstractMoveToPreviousScreenExecutorMFCTP.cs" />
+    <Compile Include="Command\AbstractListRawScreenExecutorMFCTP.cs" />
+    <Compile Include="Command\AbstractMoveToTragetScreenExecutorMFCTP.cs" />
+    <Compile Include="Command\Implementation\MoveToHomeScreenExecutorBC4.cs" />
+    <Compile Include="Command\Implementation\MoveToHomeScreenExecutorBH17.cs" />
+    <Compile Include="Command\Implementation\MoveToPreviousScreenExecutorMFCTPByClickClearKey.cs" />
+    <Compile Include="Command\Implementation\ListRawScreenExecutorMFCTPByLog.cs" />
+    <Compile Include="Command\Implementation\ListFixedScreenExecutorMFCTPByLog.cs" />
+    <Compile Include="FTBAutoException.cs" />
+    <Compile Include="IIterator.cs" />
+    <Compile Include="StaticLog4NetLogger.cs" />
+    <Compile Include="Machine\Config\SerialConfig.cs" />
+    <Compile Include="Machine\MFCModelTP\AbstractComponentKeyBoardMFCTP.cs" />
+    <Compile Include="Machine\MFCModelTP\AbstractComponentMachineIO.cs" />
+    <Compile Include="Machine\MFCModelTP\AbstractComponentTouchPanelMFCTP.cs" />
+    <Compile Include="Machine\MFCModelTP\AbstractMachineMFCTP.cs" />
+    <Compile Include="Machine\MFCModelTP\Implementation\Component\ComponentIOSerial.cs" />
+    <Compile Include="Machine\MFCModelTP\Implementation\Component\ComponentKeyBoardMFCTPUseIO.cs" />
+    <Compile Include="Machine\MFCModelTP\Implementation\Component\ComponentTouchPanelMFCTPUseIO.cs" />
+    <Compile Include="Machine\MFCModelTP\Implementation\Machine\MachineMFCTPUseIO.cs" />
+    <Compile Include="Command\AbstractClickMachineKeyExecutorMFCTP.cs" />
+    <Compile Include="Command\AbstractClickMachineTPExecutorMFCTP.cs" />
+    <Compile Include="Command\Implementation\ClickMachineKeyExecutorMFCTPByIO.cs" />
+    <Compile Include="Command\Implementation\ClickMachineTPExecutorMFCTPByIO.cs" />
+    <Compile Include="Command\StaticCommandExecutorList.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="BLL\Screen\Screen.cs" />
+    <Compile Include="Report\CreateReportExcle.cs" />
+    <Compile Include="Report\ICreateReport.cs" />
+    <Compile Include="Size.cs" />
+    <Compile Include="Test\BLL\FTBTestFormTest.cs" />
+    <Compile Include="Test\BLL\ScreenAggregateTest.cs" />
+    <Compile Include="Test\Command\AutoChangeLanguageTest.cs" />
+    <Compile Include="Test\Command\ClickButtonWordExecutorTest.cs" />
+    <Compile Include="Test\Command\ClickInputButtonExecutorTest.cs" />
+    <Compile Include="Test\Command\ClickMachineKeyExecutorTest.cs" />
+    <Compile Include="Test\Command\ClickMachineTPExecutorTest.cs" />
+    <Compile Include="Test\Command\ListFixedScreenExecutorTest.cs" />
+    <Compile Include="Test\Command\MoveToScreenExecutorByIdentifyListTest.cs" />
+    <Compile Include="Test\Command\MoveToHomeScreenExecutorTest.cs" />
+    <Compile Include="Test\Command\MoveToPreviousScreenExecutorTest.cs" />
+    <Compile Include="Test\Command\MoveToTargetScreenExecutorTest.cs" />
+    <Compile Include="Test\BLL\FTBRunOneTcTest.cs" />
+    <Compile Include="Test\DAL\ButtonWordFixTest.cs" />
+    <Compile Include="Test\DAL\FTBCmnDataTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\AbstractTest.cs" />
+    <Compile Include="Test\Command\LogParseTest.cs" />
+    <Compile Include="Test\Command\LogReaderTest.cs" />
+    <Compile Include="Test\Engine\CameraTest.cs" />
+    <Compile Include="Test\Engine\EWSTest.cs" />
+    <Compile Include="Test\Engine\OCRTest.cs" />
+    <Compile Include="Test\Engine\RSPTest.cs" />
+    <Compile Include="Test\Infra\CUIMachineTest.cs" />
+    <Compile Include="Test\BLL\MainControlFormTest.cs" />
+    <Compile Include="Test\Machine\MachineMFCTPTest.cs" />
+    <Compile Include="Test\MainTest.cs" />
+    <Compile Include="Test\Command\ListRawScreenExecutorTest.cs" />
+    <Compile Include="Test\DAL\TreeMemoryCommonAggregateTest.cs" />
+    <Compile Include="Test\Parser\HTMLParserTest.cs" />
+    <Compile Include="Test\Parser\ImageParserTest.cs" />
+    <Compile Include="Test\Report\FlowGraphTest.cs" />
+    <Compile Include="Test\Report\ReportNopiTest.cs" />
+    <Compile Include="Test\UI\ScreenTestTest.cs" />
+    <Compile Include="UI\AMainControlForm\MainControlForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UI\AMainControlForm\MainControlForm.designer.cs">
+      <DependentUpon>MainControlForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
+    <Compile Include="UI\AMainControlForm\ModelSelectForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    <Compile Include="UI\AMainControlForm\ModelSelectForm.Designer.cs">
+      <DependentUpon>ModelSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AMainControlForm\SelectTCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AMainControlForm\SelectTCForm.Designer.cs">
+      <DependentUpon>SelectTCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ConditionCalibration.cs" />
+    <Compile Include="UI\ConditionSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ConditionSelect.Designer.cs">
+      <DependentUpon>ConditionSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ConditionInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ConditionInput.Designer.cs">
+      <DependentUpon>ConditionInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FTBTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FTBTestForm.Designer.cs">
+      <DependentUpon>FTBTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OpinionSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OpinionSelect.Designer.cs">
+      <DependentUpon>OpinionSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScanCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ScanCalibration.Designer.cs">
+      <DependentUpon>ScanCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScreenTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ScreenTest.Designer.cs">
+      <DependentUpon>ScreenTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ScreenTestNoCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ScreenTestNoCondition.Designer.cs">
+      <DependentUpon>ScreenTestNoCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TCSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TCSelectForm.Designer.cs">
+      <DependentUpon>TCSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\USAUKEnglishCorrespondForm\AutoSizeFormClass.cs" />
+    <Compile Include="UI\USAUKEnglishCorrespondForm\AmericanBritishEnglish.cs" />
+    <Compile Include="UI\USAUKEnglishCorrespondForm\qwe.cs" />
+    <Compile Include="UI\USAUKEnglishCorrespondForm\USAUKEnglishCorrespondForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\USAUKEnglishCorrespondForm\USAUKEnglishCorrespondForm.Designer.cs">
+      <DependentUpon>USAUKEnglishCorrespondForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\USAUKEnglishCorrespondForm\UsedBritishEnglishCountries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\USAUKEnglishCorrespondForm\UsedBritishEnglishCountries.Designer.cs">
+      <DependentUpon>UsedBritishEnglishCountries.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Service References\EWSService\Service1.wsdl" />
+    <None Include="Service References\EWSService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EWSService\Service31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EWSService\Service32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RSPService\Service1.wsdl" />
+    <None Include="Service References\RSPService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RSPService\Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RSPService\Service5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\Check\Button\" />
+    <Folder Include="BLL\Screen\ControlFixer\ByCamera\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\AMainControlForm\MainControlForm.resx">
+      <DependentUpon>MainControlForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AMainControlForm\ModelSelectForm.resx">
+      <DependentUpon>ModelSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AMainControlForm\SelectTCForm.resx">
+      <DependentUpon>SelectTCForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ConditionSelect.resx">
+      <DependentUpon>ConditionSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ConditionInput.resx">
+      <DependentUpon>ConditionInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FTBTestForm.resx">
+      <DependentUpon>FTBTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OpinionSelectForm.resx">
+      <DependentUpon>OpinionSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ScanCalibration.resx">
+      <DependentUpon>ScanCalibration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ScreenTest.resx">
+      <DependentUpon>ScreenTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ScreenTestNoCondition.resx">
+      <DependentUpon>ScreenTestNoCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TCSelectForm.resx">
+      <DependentUpon>TCSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\USAUKEnglishCorrespondForm\USAUKEnglishCorrespondForm.resx">
+      <DependentUpon>USAUKEnglishCorrespondForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\USAUKEnglishCorrespondForm\UsedBritishEnglishCountries.resx">
+      <DependentUpon>UsedBritishEnglishCountries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EWSService\" />
+    <WCFMetadataStorage Include="Service References\RSPService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RSPService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RSPService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RSPService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EWSService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EWSService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EWSService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
