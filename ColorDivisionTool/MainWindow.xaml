@@ -1,0 +1,22 @@
+<Window x:Class="ColorDivisionTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+        Title="色分けツール" Height="366.475" Width="681.578">
+    <Grid Background="Gainsboro">
+        <Grid>
+            <TextBlock HorizontalAlignment="Left" Margin="21,21,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="146" Background="#FFACE474"><Run Text="INPUT"/><Run Language="ja-jp" Text=":"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="21,70,0,0" TextWrapping="Wrap" Text="対象機種:" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.578,1.022"/>
+            <ComboBox Name="cmb_Model" HorizontalAlignment="Left" Margin="79,68,0,0" VerticalAlignment="Top" Width="88" Height="22" ItemsSource="{Binding ModelInfoKey}" SelectedItem="{Binding SelectModelInfo}" SelectionChanged="cmb_Model_SelectionChanged" IsEnabled="{Binding Btn_ColorStartCtl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock HorizontalAlignment="Left" Margin="294,70,0,0" TextWrapping="Wrap" Text="機種類型:" VerticalAlignment="Top" FontWeight="Bold"/>
+            <ComboBox Name="cmb_type" HorizontalAlignment="Left" Margin="352,68,0,0" VerticalAlignment="Top" Width="88" Height="22" ItemsSource="{Binding ModelInfoValue}" SelectedItem="{Binding SelectModelType}" IsEnabled="{Binding Btn_ColorStartCtl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock FontWeight="Bold" HorizontalAlignment="Left" Margin="21,124,0,0" TextWrapping="NoWrap" Text="削除項目一覧EXCEL:" VerticalAlignment="Top" Width="126"/>
+            <TextBox Name="txt_languageFile_chgColor" HorizontalAlignment="Left" Height="23" Margin="162,122,0,0" VerticalAlignment="Top" Width="462" Text="{Binding Excel_EvidenceFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding Btn_ColorStartCtl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Name="btn_BrowseEvidenceFile" Content="..." HorizontalAlignment="Left" Margin="629,121,0,0" VerticalAlignment="Top" Width="35" Command="{Binding OpenFileDialog_Excel}" CommandParameter="Excel_EvidenceFile" IsEnabled="{Binding Btn_ColorStartCtl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Name="btn_start_ChgColor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="38" Margin="294,238,0,0" Content="実施" Command="{Binding Btn_StartChgColor}" IsEnabled="{Binding Btn_ColorStartCtl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Name="LogOutLabel" Margin="10,204,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Content="{Binding MWindowShowLog, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Name="DanceCat" gif:AnimationBehavior.SourceUri="pack://siteoforigin:,,,/DanceCat.gif" Margin="566,228,10,10" Visibility="{Binding Show_GifStatus1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Image Name="Loading" gif:AnimationBehavior.SourceUri="pack://siteoforigin:,,,/loading.gif" Height="30" Visibility="{Binding Show_GifStatus2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,169,0,137"/>
+        </Grid>
+    </Grid>
+</Window>
