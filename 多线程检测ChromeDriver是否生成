@@ -55,3 +55,46 @@
                 catch { }
             }
         }
+
+        private void InputPassword()
+        {
+            if (password.Equals(""))
+                return;
+            try
+            {//定位到密码框，然后输入密码
+                //IWebElement pwdEle = driver.FindElement(By.ClassName("SetBox"));
+                //IWebElement tempEle = pwdEle.FindElement(By.XPath(".//input[@type='password']"));
+                //IWebElement submitEle = pwdEle.FindElement(By.XPath(".//input[@type='submit']"));
+                IWebElement tempEle = driver.FindElement(By.Id("LogBox"));
+                tempEle.SendKeys(password);
+                IWebElement submitEle = driver.FindElement(By.Id("login"));
+                submitEle.SendKeys(" ");
+            }
+            catch (Exception ex)
+            {//关闭chrome浏览器进程
+                Process[] process = Process.GetProcessesByName("chrome");
+                if (process.Length != 0)
+                {
+                    foreach (Process item in process)
+                    {
+                        if (item.ProcessName == "chrome")
+                        {
+                            item.Kill();
+                        }
+                    }
+                }
+                //关闭ChromeDriver进程
+                Process[] proc = Process.GetProcessesByName("chromedriver");
+                if (proc.Length != 0)
+                {
+                    foreach (Process item in proc)
+                    {
+                        if (item.ProcessName == "chromedriver")
+                        {
+                            item.Kill();
+                        }
+                    }
+                }
+                throw new Exception("Password Error: " + ex.Message);
+            }
+        }
