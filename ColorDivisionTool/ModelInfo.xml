@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo>
+  <BC4>
+    <Model Type="50/70TP" JpnName = "JPKLS"/>
+    <Model Type="3.7TP" JpnName = "JPKLS"/>
+    <Model Type="2.7TP" JpnName = "JPKLS"/>
+    <Model Type="2line" JpnName = "JPN"/>
+  </BC4>
+  <MINI17>
+    <Model Type="1LINE" JpnName = "JPKNJ"/>
+    <Model Type="1.8Cur" JpnName = "JPKNJ"/>
+    <Model Type="2.7TP" JpnName = "JPKNJ"/>
+  </MINI17>
+  <BH17>
+    <Model Type="1LINE" JpnName = "JPKNJ"/>
+    <Model Type="1.8Cur" JpnName = "JPKNJ"/>
+    <Model Type="2.7TP" JpnName = "JPKNJ"/>
+    <Model Type="3.7TP" JpnName = "JPKNJ"/>
+  </BH17>
+  <BIZ>
+    <Model Type="1LINE" JpnName = "JPKNJ"/>
+    <Model Type="1.8Cur" JpnName = "JPKNJ"/>
+    <Model Type="2.7TP" JpnName = "JPKNJ"/>
+  </BIZ>
+  <XHT-PRN>
+    <Model Type="2.7TP" JpnName = "JPKNJ"/>
+  </XHT-PRN>
+  <XHT-MFC>
+    <Model Type="2.7TP" JpnName = "JPKNJ"/>
+    <Model Type="3.7TP" JpnName = "JPKNJ"/>
+  </XHT-MFC>
+  <ELL>
+    <Model Type="1LINE" JpnName="JPN"/>
+    <Model Type="2LINE" JpnName="JPKJH"/>
+    <Model Type="2.7TP" JpnName="JPKLS"/>
+    <Model Type="LED" JpnName="JPN"/>
+  </ELL>
+  <ECL>
+    <Model Type="1LINE" JpnName = "JPN"/>
+    <Model Type="2LINE" JpnName = "JPKJH"/>
+    <Model Type="2.7TP" JpnName = "JPKLS"/>
+    <Model Type="3.7TP" JpnName = "JPKLS"/>
+    <Model Type="5.7TP" JpnName = "JPKLS"/>
+  </ECL>
+</ModelInfo>
+<!--
+44 JPKNJ
+45 JPKJH
+46 JPKLS
+47 JPN
+48 JPE
+ -->
